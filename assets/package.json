@@ -1,0 +1,22 @@
+{
+  "name": "virtue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/tailwind.css -o ./dist/tailwind.css --watch",
+    "build": "npx tailwindcss -i ./css/tailwind.css -o ./dist/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "jquery": "^3.6.0"
+  }
+}
