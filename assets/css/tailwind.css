@@ -7,19 +7,19 @@
     /* notif dot */
     .notif-dot-success
     {
-        @apply absolute ml-8 mb-8 p-1 rounded-full bg-green-400;
+        @apply absolute ml-8 mb-8 p-1 rounded-full bg-success;
     }
     .notif-dot-danger
     {
-        @apply absolute ml-8 mb-8 p-1 rounded-full bg-red-400;
+        @apply absolute ml-8 mb-8 p-1 rounded-full bg-danger;
     }
     .notif-dot-warning
     {
-        @apply absolute ml-8 mb-8 p-1 rounded-full bg-yellow-400;
+        @apply absolute ml-8 mb-8 p-1 rounded-full bg-warning;
     }
     .notif-dot-info
     {
-        @apply absolute ml-8 mb-8 p-1 rounded-full bg-blue-400;
+        @apply absolute ml-8 mb-8 p-1 rounded-full bg-info;
     }
 
     /* card */
@@ -35,13 +35,24 @@
 
     .card
     {
-        @apply flex justify-center items-center box-content shadow-md p-4 m-2 rounded-xl;
+        @apply box-content shadow-lg p-4 m-2 rounded-xl;
+    }
+
+    .h-card
+    {
+        @apply my-4 flex flex-col;
+    }
+
+    .box-color
+    {
+        @apply box-content w-4/6 h-6 rounded-md mr-4;
     }
     
+
     /* btn */
     .active
     {
-        @apply bg-purple-dark text-purple-light rounded-full;
+        @apply bg-primary text-purple-light rounded-full;
     }
 
     .btn-icon
@@ -57,12 +68,12 @@
 
     .search-btn
     {
-        @apply bg-purple-light text-purple-dark px-4 rounded-full;
+        @apply bg-purple-light text-primary px-4 rounded-full;
     }
 
     .search-input
     {
-        @apply text-blue-dark bg-purple-light rounded-full text-base py-2 pl-6 lg:w-60 xl:w-auto focus:outline-none;
+        @apply text-tertiary bg-purple-light rounded-full text-base py-2 pl-6 lg:w-60 xl:w-auto focus:outline-none;
     }
 
     /* divider */
@@ -74,7 +85,7 @@
     /*  sidebar */
     .sidebar
     {
-        @apply absolute text-xs h-full bg-purple-light w-3/4 px-4 text-blue-gray sm:w-2/4 lg:w-3/12 lg:relative xl:w-2/12 lg:top-0 lg:px-0;
+        @apply absolute text-xs h-full bg-purple-light w-3/4 px-4 text-secondary-light sm:w-2/4 lg:w-3/12 lg:relative xl:w-2/12 lg:top-0 lg:px-0;
     }
 
     .sidebar-header
@@ -127,6 +138,16 @@
         @apply tracking-widest font-sans my-4;
     }
 
+    .list
+    {
+        @apply my-2 list-none;
+    }
+
+    .list-active
+    {
+        @apply my-2 list-outside text-primary font-semibold;
+    }
+
     /* preloader */
     .preloader
     {
@@ -135,23 +156,23 @@
 
     .preloader-border
     {
-        @apply animate-ping flex justify-center items-center border-2 border-purple-dark w-10 h-10 rounded-full;
+        @apply animate-ping flex justify-center items-center border-2 border-primary w-10 h-10 rounded-full;
     }
 
     .preloader-dot
     {
-        @apply animate-ping border-2 bg-purple-dark w-5 h-5 rounded-full;
+        @apply animate-ping border-2 bg-primary w-5 h-5 rounded-full;
     }
 
     .preloader-text
     {
-        @apply mt-10 tracking-widest font-semibold text-purple-dark;
+        @apply mt-10 tracking-widest font-semibold text-primary;
     }
 
     /* body */
     .full-body
     {
-        @apply flex bg-purple-light p-4 text-sm font-poppins text-blue-dark ;
+        @apply flex bg-purple-light p-4 text-sm font-poppins text-tertiary ;
     }
 
     /* input */

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Virtue - Colors</title>
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         
     </head>    
-    <body class="full-body h-screen" x-data="{sidebar: true}">
+    <body class="full-body h-screen tracking-widest" x-data="{sidebar: true}">
         <!-- preloader -->
         <div id="preloader" class="preloader">
             <div class="preloader-border">
@@ -32,15 +33,15 @@
             <div class="sidebar-header">
                 <a href="#" class="flex items-center lg:justify-center">
                     <div class="flex justify-center items-center box-content bg-purple-light shadow-lg h-10 w-10 rounded-xl mr-4">
-                        <span class="text-purple-dark font-black text-2xl">V</span>
+                        <span class="text-primary font-black text-2xl">V</span>
                     </div>
-                    <span class="tracking-widest text-purple-dark text-xl font-semibold lg:text-2xl">
+                    <span class="tracking-widest text-primary text-xl font-semibold lg:text-2xl">
                         Virtue
                     </span>
                 </a>
                 <div class="block lg:hidden">
                     <button class="flex justify-center items-center py-2 box-content bg-purple-light shadow-lg w-10 rounded-xl" @click="sidebar = false">
-                        <i class='bx bx-x bx-sm text-purple-dark'></i>
+                        <i class='bx bx-x bx-sm text-primary'></i>
                     </button>
                 </div>
             </div>
@@ -54,21 +55,39 @@
                                 <span class="sidebar-item-text line-clamp-1">Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-list" x-data="{ open: false }">
+                        <li class="sidebar-list" x-data="{ open: true }">
                             <button class="sidebar-list-link active" @click="open = !open">
                                 <i class='bx bxs-component bx-xs'></i>               
                                 <span class="sidebar-item-text line-clamp-1">Component</span>
                                 <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
                             </button>
                             <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
-                                <li class="my-2">
-                                    <a href="#"> Alert</a>
+                                <li class="list">
+                                    <a href="Component - Alert.html"> Alert</a>
                                 </li>
-                                <li class="my-2">
-                                    Color
+                                <li class="list">
+                                    <a href="Component - Badge.html"> Badge</a>
                                 </li>
-                                <li class="my-2">
-                                    Badge
+                                <li class="list">
+                                    <a href="Component - Button.html"> Button</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Card.html"> Card</a>
+                                </li>
+                                <li class="list-active">
+                                    <a href="Component - Colors.html"> Color</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - List Group.html"> List Group</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Modal.html"> Modal</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Paginaion.html"> Pagination</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Tooltip.html"> Tooltip</a>
                                 </li>
                             </ul>
                         </li>
@@ -102,13 +121,13 @@
             <div class="sidebar-footer">
                 <div class="card">
                     <span>
-                        All Rights Reserved by <a href="#" class="text-purple-dark font-semibold">Riddesain.</a> 
-                        Designed and Developed by <a href="#" class="text-purple-dark font-semibold">Ridwan.</a> 
-                        Under License <a href="#" class="text-purple-dark font-semibold">MIT.</a>
+                        All Rights Reserved by <a href="#" class="text-primary font-semibold">Riddesain.</a> 
+                        Designed and Developed by <a href="#" class="text-primary font-semibold">Ridwan.</a> 
+                        Under License <a href="#" class="text-primary font-semibold">MIT.</a>
                     </span>
                 </div>
-                <div class="card">
-                    <span class="font-medium text-purple-dark">
+                <div class="card flex justify-center">
+                    <span class="font-medium text-primary">
                         Virtue 1.0.0
                     </span>
                 </div>
@@ -123,10 +142,10 @@
                 <div class="py-4">
                     <div class="flex flex-row ">
                         <button class="flex btn-icon lg:hidden" @click="sidebar = true" id="btn-sidebar">
-                            <i class='bx bx-menu bx-sm text-purple-dark'></i>
+                            <i class='bx bx-menu bx-sm text-primary'></i>
                         </button>
                         <button class="lg:flex btn-icon hidden" @click="sidebar = !sidebar" id="btn-sidebar">
-                            <i class='bx bx-menu bx-sm text-purple-dark'></i>
+                            <i class='bx bx-menu bx-sm text-primary'></i>
                         </button>
                         <div class="hidden lg:block">
                             <div class="search">
@@ -143,10 +162,10 @@
                         <div class="flex justify-start" x-data="{ open: false }">
                             <button class="flex btn-icon" @click="open = ! open">
                                 <span class="notif-dot-success animate-ping"></span>
-                                <i class='bx bxs-inbox bx-sm bx-tada-hover text-purple-dark' ></i>
+                                <i class='bx bxs-inbox bx-sm bx-tada-hover text-primary' ></i>
                             </button>
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
-                                <div class="w-60 h-auto p-4 bg-purple-light shadow-md text-blue-dark rounded-lg">
+                                <div class="w-60 h-auto p-4 bg-purple-light shadow-md text-tertiary rounded-lg">
                                     <a href="#" class="flex justify-start p-2">
                                         <img src="assets/img/faces/1.jpg" class="rounded-full h-10 w-10" alt="">
                                         <div class="flex flex-col w-60">
@@ -182,12 +201,12 @@
                         <div class="flex justify-start" x-data="{ open: false }">
                             <button class="flex btn-icon lg:h-10 lg:w-10" @click="open = ! open">
                                 <span class="notif-dot-warning animate-ping"></span>
-                                <i class='bx bxs-notification bx-sm bx-tada-hover text-purple-dark' ></i>
+                                <i class='bx bxs-notification bx-sm bx-tada-hover text-primary' ></i>
                             </button>
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
-                                <div class="w-60 h-auto p-4 bg-purple-light shadow-md text-blue-dark rounded-lg">
+                                <div class="w-60 h-auto p-4 bg-purple-light shadow-md text-tertiary rounded-lg">
                                     <a href="#" class="flex justify-start p-2">
-                                        <div class="card-icon p-2 bg-red-400 text-purple-light">
+                                        <div class="card-icon p-2 bg-danger text-purple-light">
                                             <i class='bx bx-shape-circle bx-sm'></i>
                                         </div>  
                                         <div class="flex flex-col w-60">
@@ -197,7 +216,7 @@
                                         </div>                                    
                                     </a>
                                     <a href="#" class="flex justify-start p-2">
-                                        <div class="card-icon p-2 bg-blue-400 text-purple-light">
+                                        <div class="card-icon p-2 bg-info text-purple-light">
                                             <i class='bx bx-slider-alt bx-sm'></i>
                                         </div>
                                         <div class="flex flex-col w-60">
@@ -207,7 +226,7 @@
                                         </div>                                    
                                     </a>
                                     <a href="#" class="flex justify-start p-2">
-                                        <div class="card-icon p-2 bg-green-400 text-purple-light">
+                                        <div class="card-icon p-2 bg-success text-purple-light">
                                             <i class='bx bx-paste bx-sm'></i>
                                         </div>
                                         <div class="flex flex-col w-60">
@@ -232,27 +251,27 @@
                         <div class="hidden lg:block">
                             <p class="font-semibold py-2 px-4 tracking-wider">Hi, Muhammad</p>
                         </div>                        
-                        <button class="h-10 w-10 border-blue-dark rounded-full" @click="open = ! open">
+                        <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
                             <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
                         </button>
                         <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
-                            <div class="w-60 h-w-60 p-4 bg-purple-light shadow-md text-blue-dark rounded-lg">
+                            <div class="w-60 h-w-60 p-4 bg-purple-light shadow-md text-tertiary rounded-lg">
                                 <a href="#" class="flex-card">
                                     <div class="card-icon">
-                                        <i class='bx bxs-user-circle bx-sm text-purple-dark' ></i>
+                                        <i class='bx bxs-user-circle bx-sm text-primary' ></i>
                                     </div>
                                     <span class="px-2 font-medium">Profile</span>
                                 </a>
                                 <a href="#" class="flex-card">
                                     <div class="card-icon">
-                                        <i class='bx bx-slider-alt bx-sm text-purple-dark'></i>
+                                        <i class='bx bx-slider-alt bx-sm text-primary'></i>
                                     </div>
                                     <span class="px-2 font-medium">Setting</span>
                                 </a>
                                 <hr class="border-gray-300">
                                 <a href="#" class="flex-card">
                                     <div class="card-icon">
-                                        <i class='bx bx-exit bx-sm text-purple-dark'></i>
+                                        <i class='bx bx-exit bx-sm text-primary'></i>
                                     </div>
                                     <span class="px-2 font-medium ">logout</span>
                                 </a>
@@ -264,7 +283,7 @@
                 <div class="flex flex-grow items-center justify-center">
                     <div class="block lg:hidden"> 
                         <a href="#" class="flex items-center justify-center">
-                            <span class="tracking-widest text-purple-dark text-lg font-semibold ">
+                            <span class="tracking-widest text-primary text-lg font-semibold ">
                                 Virtue
                             </span>
                         </a>
@@ -274,12 +293,12 @@
                     <div class="block lg:hidden"> 
                         <div x-data="{ open: false }" class="flex justify-end py-4">                                             
                             <button class="flex btn-icon" @click="open = ! open">
-                                <i class='bx bx-dots-horizontal-rounded bx-sm text-purple-dark' ></i>
+                                <i class='bx bx-dots-horizontal-rounded bx-sm text-primary' ></i>
                             </button>
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition:enter="animate__animated animate__bounceInDown" x-transition:leave="animate__animated animate__bounceOutUp">
-                                <div class="w-60 h-w-60 p-4 bg-purple-light shadow-md text-blue-dark rounded-lg">
+                                <div class="w-60 h-w-60 p-4 bg-purple-light shadow-md text-tertiary rounded-lg">
                                     <div class="flex-card">
-                                        <button class="h-10 w-10 border-blue-dark rounded-full" @click="open = ! open">
+                                        <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
                                             <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
                                         </button>
                                         <p class="flex justify-center items-center font-semibold px-4 tracking-wider">Hi, Muhammad</p>                                    
@@ -288,34 +307,34 @@
                                     <a href="#" class="flex-card">
                                         <div class="card-icon">
                                             <span class="notif-dot-success"></span>
-                                            <i class='bx bxs-inbox bx-sm text-purple-dark' ></i>
+                                            <i class='bx bxs-inbox bx-sm text-primary' ></i>
                                         </div>
                                         <span class="px-2 font-medium">Inbox</span>
                                     </a>
                                     <a href="#" class="flex-card">
                                         <div class="card-icon">
                                             <span class="notif-dot-warning"></span>
-                                            <i class='bx bxs-notification bx-sm text-purple-dark'></i>
+                                            <i class='bx bxs-notification bx-sm text-primary'></i>
                                         </div>
                                         <span class="px-2 font-medium">Notification</span>
                                     </a>
                                     <hr class="divider">                                        
                                     <a href="#" class="flex-card">
                                         <div class="card-icon">
-                                            <i class='bx bxs-user-circle bx-sm text-purple-dark'></i>
+                                            <i class='bx bxs-user-circle bx-sm text-primary'></i>
                                         </div>
                                         <span class="px-2 font-medium">Profile</span>
                                     </a>
                                     <a href="#" class="flex-card">
                                         <div class="card-icon">
-                                            <i class='bx bx-slider-alt bx-sm text-purple-dark'></i>
+                                            <i class='bx bx-slider-alt bx-sm text-primary'></i>
                                         </div>
                                         <span class="px-2 font-medium">Setting</span>
                                     </a>
                                     <hr class="border-gray-300">
                                     <a href="#" class="flex-card">
                                         <div class="card-icon">
-                                            <i class='bx bx-exit bx-sm text-purple-dark'></i>
+                                            <i class='bx bx-exit bx-sm text-primary'></i>
                                         </div>
                                         <span class="px-2 font-medium ">logout</span>
                                     </a>
@@ -330,6 +349,136 @@
             <!-- end nav -->     
             
             <!-- section -->
+            <section>
+                <!-- header -->
+                <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
+                    <div class="flex justify-start">
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">Color</h1> <!-- Title -->
+                        <span class="text-xs"></span> <!-- Sub Title -->
+                    </div>
+                    <div class="flex justify-end">
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Colors</span>
+                    </div>
+                </div>
+                <!-- end header -->
+
+                <!-- body -->
+                <div class="flex lg:justify-between flex-col lg:flex-row">
+                    <div class="card lg:w-2/4 flex flex-col">
+                        <div class="h-card">
+                            <span class="tracking-widest font-semibold text-primary mb-4">Core Color</span> <!-- Title -->
+                            <span class="text-xs mb-4"> For other colors, <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank" class="font-semibold text-info">click here!</a> </span> <!-- Description-->
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-primary"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Primary</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-secondary"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Secondary</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-tertiary"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Tertiary</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-danger"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Danger</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-success"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Success</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-warning"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Warning</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-info"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Info</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-dark"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Dark</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card lg:w-2/4 flex flex-col">
+                        <div class="h-card">
+                            <span class="tracking-widest font-semibold text-primary mb-4">Core Color Light</span> <!-- Title -->
+                            <span class="text-xs mb-4"> For other colors, <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank" class="font-semibold text-info">click here!</a> </span> <!-- Description-->
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-primary-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Primary Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-secondary-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Secondary Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-tertiary-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Tertiary Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-danger-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Danger Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-success-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Success Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-warning-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Warning Light</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-row my-1">
+                                <div class="box-color bg-info-light"></div>
+                                <div class="w-2/6">
+                                    <span class="font-semibold">Info Light</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end body -->
+            </section>
             <!-- end section -->
         </main>
         <!-- end main -->

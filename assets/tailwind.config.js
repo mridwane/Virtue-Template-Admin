@@ -10,9 +10,22 @@ module.exports = {
       },
       colors: {
         'purple-light': '#EDE9FE',
-        'purple-dark': '#672FEC',
-        'blue-dark': '#270B6F',
-        'blue-gray': '#9896C8'
+        'primary': '#672FEC',
+        'tertiary': '#270B6F',
+        'secondary': '#3F3D56',
+        'danger': '#EF4444',
+        'success': '#10B981',
+        'warning': '#F59E0B',
+        'info': '#3B83F5',
+        'light': '#FFFFFF',
+        'dark': '#000000',
+        'primary-light': '#8A58FF',
+        'tertiary-light': '#52349F',
+        'secondary-light': '#68667B',
+        'danger-light': '#F57F7F',
+        'success-light': '#60D1AC',
+        'warning-light': '#FECC77',
+        'info-light': '#79ADFF'
 
       },
       boxShadow: {
