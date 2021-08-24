@@ -8,11 +8,11 @@ module.exports = {
         'sans': ['Open Sans'],      
         'poppins': ['Poppins'],
       },
-      colors: {
-        'purple-light': '#EDE9FE',
+      colors: {        
         'primary': '#672FEC',
-        'tertiary': '#270B6F',
         'secondary': '#3F3D56',
+        'tertiary': '#270B6F',        
+        'quaternary': '#EDE9FE',
         'danger': '#EF4444',
         'success': '#10B981',
         'warning': '#F59E0B',
@@ -38,19 +38,23 @@ module.exports = {
       },
       transitionDuration: {
         '5': '0.5s',
-      }
+      },
+      
     },
   },
   variants: {
     extend: {
-      translate: ['group-focus'],
-      transitionTimingFunction: ['hover', 'focus'],
-      width: ['hover', 'focus', 'active'],
+      backgroundColor: ['focus'],
+      borderColor: ['focus'],
+      borderRadius: ['hover', 'focus', 'active'],
+      display: ['hover', 'focus', 'active'],
       margin: ['hover', 'focus', 'active'],
       padding: ['hover', 'focus', 'active'],
-      display: ['hover', 'focus', 'active'],
-      borderRadius: ['hover', 'focus', 'active'],
+      textColor: ['focus'],
+      transitionTimingFunction: ['hover', 'focus'],
       transitionDuration: ['hover', 'focus', 'active'],
+      translate: ['group-focus'],      
+      width: ['hover', 'focus', 'active'],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
