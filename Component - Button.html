@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Virtue - Colors</title>
+        <title>Virtue - Button</title>
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,13 +68,13 @@
                                 <li class="list">
                                     <a href="Component - Badge.html"> Badge</a>
                                 </li>
-                                <li class="list">
+                                <li class="list-active">
                                     <a href="Component - Button.html"> Button</a>
                                 </li>
                                 <li class="list">
                                     <a href="Component - Card.html"> Card</a>
                                 </li>
-                                <li class="list-active">
+                                <li class="list">
                                     <a href="Component - Colors.html"> Color</a>
                                 </li>
                                 <li class="list">
@@ -353,11 +353,11 @@
                 <!-- header -->
                 <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
                     <div class="flex justify-start">
-                        <h1 class="text-primary font-medium text-2xl tracking-widest">Color</h1> <!-- Title -->
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">Button</h1> <!-- Title -->
                         <span class="text-xs"></span> <!-- Sub Title -->
                     </div>
                     <div class="flex justify-end">
-                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Colors</span>
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Button</span>
                     </div>
                 </div>
                 <!-- end header -->
@@ -366,296 +366,46 @@
                 <div class="grid lg:grid-cols-2 gap-4">
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Core Color</span> <!-- Title -->
-                            <span class="text-xs mb-4"> For other colors, <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank" class="font-semibold text-info">click here!</a> </span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">Button Default</span> <!-- Title -->
+                            <span class="text-xs mb-4"> To use add class <code class="text-danger">.btn-{type}</code> (e.g., .btn-primary).</span> <!-- Description-->
                         </div>
-                        <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-primary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Primary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-secondary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Secondary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-tertiary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Tertiary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-quaternary border-primary border-2"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Quaternary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-danger"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Danger</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-success"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Success</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-warning"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Warning</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-info"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Info</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-light border-2 border-primary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-dark"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Dark</span>
-                                </div>
-                            </div>                            
+                        <div class="flex flex-row gap-2 flex-wrap">
+                            <button class="btn-primary">Primary</button>
+                            <button class="btn-secondary">Secondary</button>
+                            <button class="btn-tertiary">Tertiary</button>
+                            <button class="btn-danger">Danger</button>
+                            <button class="btn-success">Success</button>
+                            <button class="btn-warning">Warning</button>
+                            <button class="btn-info">Info</button>
+                            <button class="btn-primary-light">Primary Light</button>
+                            <button class="btn-secondary-light">Secondary Light</button>
+                            <button class="btn-tertiary-light">Tertiary Light</button>
+                            <button class="btn-danger-light">Danger Light</button>
+                            <button class="btn-success-light">Success Light</button>
+                            <button class="btn-warning-light">Warning Light</button>
+                            <button class="btn-info-light">Info Light</button>
                         </div>
                     </div>
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Core Color Light</span> <!-- Title -->
-                            <span class="text-xs mb-4"> For other colors, <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank" class="font-semibold text-info">click here!</a> </span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">Button Outline</span> <!-- Title -->
+                            <span class="text-xs mb-4"> To use add class <code class="text-danger">.btn-{type}</code> (e.g., .btn-primary).</span> <!-- Description-->
                         </div>
-                        <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-primary-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Primary Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-secondary-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Secondary Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-tertiary-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Tertiary Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-danger-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Danger Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-success-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Success Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-warning-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Warning Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-info-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Info Light</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex-col">
-                        <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Background Color</span> <!-- Title -->
-                            <span class="text-xs mb-4">To use add class, <code class="text-danger">.bg-{color}</code>(e.g., .bg-success)</span> <!-- Description-->
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-primary"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-primary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-secondary"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-secondary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-tertiary"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-tertiary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-quaternary border-primary border-2"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-quaternary</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-danger"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-danger</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-success"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-success</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-warning"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-warning</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-info"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-info</span>
-                                </div>
-                            </div>     
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-primary-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-primary-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-secondary-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-secondary-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-tertiary-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-tertiary-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-danger-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-danger-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-success-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-success-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-warning-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-warning-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-info-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-info-light</span>
-                                </div>
-                            </div>                   
-                        </div>
-                    </div>
-                    <div class="card flex-col">
-                        <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Text Color</span> <!-- Title -->
-                            <span class="text-xs mb-4">To use add class, <code class="text-danger">.text-{color}</code>(e.g., .text-success)</span> <!-- Description-->
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-primary">
-                                    Text Color Primary
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-secondary">
-                                    Text Color Secondary
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-tertiary">
-                                    Text Color Tertiary
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color p-1 text-quaternary bg-primary">
-                                    Text Color Quaternary
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-danger">
-                                    Text Color Danger
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-success">
-                                    Text Color Success
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-warning">
-                                    Text Color Warning
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-info">
-                                    Text Color Info
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-primary-light">
-                                    Text Color Primary Light
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-secondary-light">
-                                    Text Color Secondary Light
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-tertiary-light">
-                                    Text Color Tertiary Light
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-danger-light">
-                                    Text Color Danger Light
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color p-1 text-warning-light bg-tertiary">
-                                    Text Color Warning Light
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-info-light">
-                                    Text Color Info Light
-                                </div>
-                            </div>
+                        <div class="flex flex-row gap-2 flex-wrap">
+                            <button class="btn-primary-outline">Primary</button>
+                            <button class="btn-secondary-outline">Secondary</button>
+                            <button class="btn-tertiary-outline">Tertiary</button>
+                            <button class="btn-danger-outline">Danger</button>
+                            <button class="btn-success-outline">Success</button>
+                            <button class="btn-warning-outline">Warning</button>
+                            <button class="btn-info-outline">Info</button>
+                            <button class="btn-primary-outline-light">Primary Light</button>
+                            <button class="btn-secondary-outline-light">Secondary Light</button>
+                            <button class="btn-tertiary-outline-light">Tertiary Light</button>
+                            <button class="btn-danger-outline-light">Danger Light</button>
+                            <button class="btn-success-outline-light">Success Light</button>
+                            <button class="btn-warning-outline-light">Warning Light</button>
+                            <button class="btn-info-outline-light">Info Light</button>
                         </div>
                     </div>
                 </div>

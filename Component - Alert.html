@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Virtue - Colors</title>
+        <title>Virtue - Alert</title>
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +62,7 @@
                                 <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
                             </button>
                             <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
-                                <li class="list">
+                                <li class="list-active">
                                     <a href="Component - Alert.html"> Alert</a>
                                 </li>
                                 <li class="list">
@@ -74,7 +74,7 @@
                                 <li class="list">
                                     <a href="Component - Card.html"> Card</a>
                                 </li>
-                                <li class="list-active">
+                                <li class="list">
                                     <a href="Component - Colors.html"> Color</a>
                                 </li>
                                 <li class="list">
@@ -352,12 +352,12 @@
             <section>
                 <!-- header -->
                 <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
-                    <div class="flex justify-start">
-                        <h1 class="text-primary font-medium text-2xl tracking-widest">Color</h1> <!-- Title -->
+                    <div class="flex justify-start flex-col">
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">Alert</h1> <!-- Title -->
                         <span class="text-xs"></span> <!-- Sub Title -->
                     </div>
                     <div class="flex justify-end">
-                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Colors</span>
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Alert</span>
                     </div>
                 </div>
                 <!-- end header -->
@@ -366,295 +366,150 @@
                 <div class="grid lg:grid-cols-2 gap-4">
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Core Color</span> <!-- Title -->
-                            <span class="text-xs mb-4"> For other colors, <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank" class="font-semibold text-info">click here!</a> </span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">Default Alert</span> <!-- Title -->
+                            <span class="text-xs mb-4"> To use add class <code class="text-danger font-semibold">.box-alert .bg-{type}</code> (e.g., .box-alert .bg-success)</span> <!-- Description-->
                         </div>
                         <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-primary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Primary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-primary text-light">
+                                <span class="text-xs">This is a type primary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-secondary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Secondary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-secondary text-light">
+                                <span class="text-xs">This is a type secondary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-tertiary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Tertiary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-tertiary text-light">
+                                <span class="text-xs">This is a type tertiary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-quaternary border-primary border-2"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Quaternary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-danger text-light">
+                                <span class="text-xs">This is a type danger alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-danger"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Danger</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-success text-light">
+                                <span class="text-xs">This is a type success alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-success"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Success</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-warning text-light">
+                                <span class="text-xs">This is a type warning alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-warning"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Warning</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-info text-light">
+                                <span class="text-xs">This is a type info alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-info"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Info</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-light text-dark">
+                                <span class="text-xs">This is a type light alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-light border-2 border-primary"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-dark"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Dark</span>
-                                </div>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="card flex-col">
-                        <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Core Color Light</span> <!-- Title -->
-                            <span class="text-xs mb-4"> For other colors, <a href="https://tailwindcss.com/docs/customizing-colors" target="_blank" class="font-semibold text-info">click here!</a> </span> <!-- Description-->
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-primary-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Primary Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-secondary-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Secondary Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-tertiary-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Tertiary Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-danger-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Danger Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-success-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Success Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-warning-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Warning Light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 bg-info-light"></div>
-                                <div class="w-2/6">
-                                    <span class="font-semibold">Info Light</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-dark text-light">
+                                <span class="text-xs">This is a type dark alert</span>
                             </div>
                         </div>
                     </div>
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Background Color</span> <!-- Title -->
-                            <span class="text-xs mb-4">To use add class, <code class="text-danger">.bg-{color}</code>(e.g., .bg-success)</span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">Alert Dismissable</span> <!-- Title -->
+                            <span class="text-xs mb-4"> To use add class <code class="text-danger font-semibold">.box-alert .bg-{type} </code> (e.g., .box-alert .bg-success) and add AlpineJS function.</span> <!-- Description-->
                         </div>
                         <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-primary"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-primary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-primary text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type primary alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button>                                
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-secondary"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-secondary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-secondary text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type secondary alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-tertiary"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-tertiary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-tertiary text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type tertiary alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-quaternary border-primary border-2"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-quaternary</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-danger text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut"> 
+                                <span class="text-xs">This is a type danger alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-danger"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-danger</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-success text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type success alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-success"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-success</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-warning text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type warning alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-warning"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-warning</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-info text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut"> 
+                                <span class="text-xs">This is a type info alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-info"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-info</span>
-                                </div>
-                            </div>     
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-primary-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-primary-light</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-light text-dark" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type light alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-secondary-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-secondary-light</span>
-                                </div>
+                            <div class="box-alert rounded-md bg-dark text-light" x-data="{ alert: true }" x-show="alert" x-transition:leave="animate__animated animate__fadeOut">
+                                <span class="text-xs">This is a type dark alert</span>
+                                <button @click="alert = ! alert"><i class='bx bx-x bx-sm'></i></button> 
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-tertiary-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-tertiary-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-danger-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-danger-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-success-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-success-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-warning-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-warning-light</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-3/6 bg-info-light"></div>
-                                <div class="w-3/6">
-                                    <span class="font-semibold">bg-info-light</span>
-                                </div>
-                            </div>                   
                         </div>
                     </div>
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Text Color</span> <!-- Title -->
-                            <span class="text-xs mb-4">To use add class, <code class="text-danger">.text-{color}</code>(e.g., .text-success)</span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">Alert Runded Large</span> <!-- Title -->
+                            <span class="text-xs mb-4"> To use add class <code class="text-danger font-semibold">.box-alert rounded-lg .bg-{type}</code> (e.g., .box-alert rounded-lg .bg-success)</span> <!-- Description-->
                         </div>
                         <div class="flex flex-col">
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-primary">
-                                    Text Color Primary
-                                </div>
+                            <div class="box-alert rounded-lg bg-primary text-light">
+                                <span class="text-xs">This is a type primary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-secondary">
-                                    Text Color Secondary
-                                </div>
+                            <div class="box-alert rounded-lg bg-secondary text-light">
+                                <span class="text-xs">This is a type secondary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-tertiary">
-                                    Text Color Tertiary
-                                </div>
+                            <div class="box-alert rounded-lg bg-tertiary text-light">
+                                <span class="text-xs">This is a type tertiary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color p-1 text-quaternary bg-primary">
-                                    Text Color Quaternary
-                                </div>
+                            <div class="box-alert rounded-lg bg-danger text-light">
+                                <span class="text-xs">This is a type danger alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-danger">
-                                    Text Color Danger
-                                </div>
+                            <div class="box-alert rounded-lg bg-success text-light">
+                                <span class="text-xs">This is a type success alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-success">
-                                    Text Color Success
-                                </div>
+                            <div class="box-alert rounded-lg bg-warning text-light">
+                                <span class="text-xs">This is a type warning alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-warning">
-                                    Text Color Warning
-                                </div>
+                            <div class="box-alert rounded-lg bg-info text-light">
+                                <span class="text-xs">This is a type info alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-info">
-                                    Text Color Info
-                                </div>
+                            <div class="box-alert rounded-lg bg-light text-dark">
+                                <span class="text-xs">This is a type light alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-primary-light">
-                                    Text Color Primary Light
-                                </div>
+                            <div class="box-alert rounded-lg bg-dark text-light">
+                                <span class="text-xs">This is a type dark alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-secondary-light">
-                                    Text Color Secondary Light
-                                </div>
+                        </div>
+                    </div>
+                    <div class="card flex-col">
+                        <div class="h-card">
+                            <span class="tracking-widest font-semibold text-primary mb-4">Alert Runded Full</span> <!-- Title -->
+                            <span class="text-xs mb-4"> To use add class <code class="text-danger font-semibold">.box-alert rounded-full .bg-{type}</code> (e.g., .box-alert rounded-full .bg-success)</span> <!-- Description-->
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="box-alert rounded-full bg-primary text-light">
+                                <span class="text-xs">This is a type primary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-tertiary-light">
-                                    Text Color Tertiary Light
-                                </div>
+                            <div class="box-alert rounded-full bg-secondary text-light">
+                                <span class="text-xs">This is a type secondary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-danger-light">
-                                    Text Color Danger Light
-                                </div>
+                            <div class="box-alert rounded-full bg-tertiary text-light">
+                                <span class="text-xs">This is a type tertiary alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color p-1 text-warning-light bg-tertiary">
-                                    Text Color Warning Light
-                                </div>
+                            <div class="box-alert rounded-full bg-danger text-light">
+                                <span class="text-xs">This is a type danger alert</span>
                             </div>
-                            <div class="flex flex-row my-1">
-                                <div class="box-color w-4/6 text-info-light">
-                                    Text Color Info Light
-                                </div>
+                            <div class="box-alert rounded-full bg-success text-light">
+                                <span class="text-xs">This is a type success alert</span>
+                            </div>
+                            <div class="box-alert rounded-full bg-warning text-light">
+                                <span class="text-xs">This is a type warning alert</span>
+                            </div>
+                            <div class="box-alert rounded-full bg-info text-light">
+                                <span class="text-xs">This is a type info alert</span>
+                            </div>
+                            <div class="box-alert rounded-full bg-light text-dark">
+                                <span class="text-xs">This is a type light alert</span>
+                            </div>
+                            <div class="box-alert rounded-full bg-dark text-light">
+                                <span class="text-xs">This is a type dark alert</span>
                             </div>
                         </div>
                     </div>
