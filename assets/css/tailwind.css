@@ -60,6 +60,72 @@
         @apply tracking-widest text-xs ;
     }
 
+    /* list group */
+    .list-group
+    {
+        @apply flex flex-wrap box-content mx-4 my-2 border-collapse border;
+    }
+    .list-group-item
+    {
+        @apply px-4 py-2 border w-full flex items-center;
+    }
+    .link-primary
+    {
+        @apply hover:text-quaternary hover:bg-primary focus:text-quaternary focus:bg-primary;
+    }
+    .link-secondary
+    {
+        @apply hover:text-quaternary hover:bg-secondary focus:text-quaternary focus:bg-secondary;
+    }
+    .link-tertiary
+    {
+        @apply hover:text-quaternary hover:bg-tertiary focus:text-quaternary focus:bg-tertiary;
+    }
+    .link-danger
+    {
+        @apply hover:text-quaternary hover:bg-danger focus:text-quaternary focus:bg-danger;
+    }
+    .link-success
+    {
+        @apply hover:text-quaternary hover:bg-success focus:text-quaternary focus:bg-success;
+    }
+    .link-warning
+    {
+        @apply hover:text-tertiary hover:bg-warning focus:text-tertiary focus:bg-warning;
+    }
+    .link-info
+    {
+        @apply hover:text-quaternary hover:bg-info focus:text-quaternary focus:bg-info;
+    }
+    .active-primary
+    {
+        @apply bg-primary text-quaternary;
+    }
+    .active-secondary
+    {
+        @apply bg-secondary text-quaternary;
+    }
+    .active-tertiary
+    {
+        @apply bg-tertiary text-quaternary;
+    }
+    .active-danger
+    {
+        @apply bg-danger text-quaternary;
+    }
+    .active-success
+    {
+        @apply bg-success text-quaternary;
+    }
+    .active-warning
+    {
+        @apply bg-warning text-quaternary;
+    }
+    .active-info
+    {
+        @apply bg-info text-quaternary;
+    }
+
     
     /* alert */
     .box-alert
