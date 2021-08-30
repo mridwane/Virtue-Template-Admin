@@ -527,7 +527,7 @@
     /*  sidebar */
     .sidebar
     {
-        @apply absolute text-xs h-full bg-quaternary w-3/4 px-4 text-secondary-light sm:w-2/4 lg:w-3/12 lg:relative xl:w-2/12 lg:top-0 lg:px-0;
+        @apply absolute ml-4 text-xs h-full bg-quaternary w-3/4 px-4 text-secondary-light sm:w-2/4 lg:w-3/12 lg:relative xl:w-2/12 lg:top-0 lg:px-0;
     }
     .sidebar-header
     {
@@ -601,9 +601,12 @@
     /* body */
     .full-body
     {
-        @apply flex bg-quaternary p-4 text-sm font-poppins text-tertiary ;
+        @apply flex bg-quaternary text-sm font-poppins text-tertiary;
     }
-
+    .main   
+    {
+        @apply mr-4 w-full lg:w-10/12;
+    }
     /* input */
     
 

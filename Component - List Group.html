@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         
     </head>    
-    <body class="full-body h-screen tracking-widest" x-data="{sidebar: true}">
+    <body class="full-body h-screen w-screen tracking-widest" x-data="{sidebar: true}">
         <!-- preloader -->
         <div id="preloader" class="preloader">
             <div class="preloader-border">
@@ -140,7 +140,7 @@
         <!-- end sidebar -->
 
         <!-- main -->
-        <main class="w-full lg:w-10/12" x-bind:class="{'lg:w-full': ! sidebar }" >
+        <main class="main" x-bind:class="{'lg:w-full': ! sidebar }" >
             <!-- nav -->
             <nav class="flex justify-between">            
                 <div class="py-4">
@@ -357,11 +357,11 @@
                 <!-- header -->
                 <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
                     <div class="flex justify-start">
-                        <h1 class="text-primary font-medium text-2xl tracking-widest">Card</h1> <!-- Title -->
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">List Group</h1> <!-- Title -->
                         <span class="text-xs"></span> <!-- Sub Title -->
                     </div>
                     <div class="flex justify-end">
-                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Card</span>
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> List Group</span>
                     </div>
                 </div>
                 <!-- end header -->
