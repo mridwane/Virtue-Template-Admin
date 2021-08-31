@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="assets/img/logo_virtue.png">
-        <title>Virtue - Badge</title>
+        <title>Virtue - Modal</title>
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +69,7 @@
                                 <li class="list">
                                     <a href="Component - Alert.html"> Alert</a>
                                 </li>
-                                <li class="list-active">
+                                <li class="list">
                                     <a href="Component - Badge.html"> Badge</a>
                                 </li>
                                 <li class="list">
@@ -84,7 +84,7 @@
                                 <li class="list">
                                     <a href="Component - List Group.html"> List Group</a>
                                 </li>
-                                <li class="list">
+                                <li class="list-active">
                                     <a href="Component - Modal.html"> Modal</a>
                                 </li>
                                 <li class="list">
@@ -294,11 +294,12 @@
                     </div>
                 </div>
                 <div class="flex flex-none">
-                    <div class="block lg:hidden"> 
+                    <div class="block lg:hidden "> 
                         <div x-data="{ open: false }" class="flex justify-end py-4">                                             
                             <button class="flex btn-icon" @click="open = ! open">
                                 <i class='bx bx-dots-horizontal-rounded bx-sm text-primary' ></i>
                             </button>
+                            
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition:enter="animate__animated animate__bounceInDown" x-transition:leave="animate__animated animate__bounceOutUp">
                                 <div class="w-60 h-w-60 p-4 bg-quaternary shadow-md text-tertiary rounded-lg">
                                     <div class="flex-card">
@@ -353,15 +354,15 @@
             <!-- end nav -->     
             
             <!-- section -->
-            <section class="section">
+            <section>
                 <!-- header -->
                 <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
                     <div class="flex justify-start">
-                        <h1 class="text-primary font-medium text-2xl tracking-widest">Badge</h1> <!-- Title -->
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">Modal</h1> <!-- Title -->
                         <span class="text-xs"></span> <!-- Sub Title -->
                     </div>
                     <div class="flex justify-end">
-                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Badge</span>
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Modal</span>
                     </div>
                 </div>
                 <!-- end header -->
@@ -370,254 +371,14 @@
                 <div class="grid lg:grid-cols-2 gap-4">
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Badge</span> <!-- Title -->
-                            <span class="text-xs mb-4"> To use add class <code class="text-danger">.box-badge .bg-{type}</code> (e.g., .box-badge .bg-success).</span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">Simple Modal</span> <!-- Title -->
+                            <span class="text-xs mb-4">use class <code class="text-danger">.list-group</code> to quickly create list group, and use class <code class="text-danger">.list-group-item</code> to create list group items. </span> <!-- Description-->
                         </div>
                         <div class="flex flex-row gap-2 flex-wrap">
-                            <div class="box-badge rounded-md bg-primary text-quaternary">
-                                Primary
-                            </div>
-                            <div class="box-badge rounded-md bg-secondary text-quaternary">
-                                Secondary
-                            </div>
-                            <div class="box-badge rounded-md bg-tertiary text-quaternary">
-                                Tertiary
-                            </div>
-                            <div class="box-badge rounded-md bg-danger text-quaternary">
-                                Danger
-                            </div>
-                            <div class="box-badge rounded-md bg-success text-quaternary">
-                                Success
-                            </div>
-                            <div class="box-badge rounded-md bg-warning text-tertiary">
-                                Warning
-                            </div>
-                            <div class="box-badge rounded-md bg-info text-quaternary">
-                                Info
-                            </div>
-                            <div class="box-badge rounded-md bg-primary-light text-quaternary">
-                                Primary Light
-                            </div>
-                            <div class="box-badge rounded-md bg-secondary-light text-quaternary">
-                                Secondary Light
-                            </div>
-                            <div class="box-badge rounded-md bg-tertiary-light text-quaternary">
-                                Tertiary light
-                            </div>
-                            <div class="box-badge rounded-md bg-danger-light text-tertiary">
-                                Danger light
-                            </div>
-                            <div class="box-badge rounded-md bg-success-light text-tertiary">
-                                Success light
-                            </div>
-                            <div class="box-badge rounded-md bg-warning-light text-tertiary">
-                                Warning light
-                            </div>
-                            <div class="box-badge rounded-md bg-info-light text-tertiary">
-                                Info light
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex-col">
-                        <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Badge with Number</span> <!-- Title -->
-                            <span class="text-xs mb-4"> To use add class <code class="text-danger">.badge-number</code> (e.g., .badge-number .bg-success).</span> <!-- Description-->
-                        </div>
-                        <div class="flex flex-row gap-2 flex-wrap">
-                            <div class="box-badge rounded-md bg-primary text-quaternary">
-                                Primary
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>                                
-                            </div>
-                            <div class="box-badge rounded-md bg-secondary text-quaternary">
-                                Secondary
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-tertiary text-quaternary">
-                                Tertiary
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-danger text-quaternary">
-                                Danger
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-success text-quaternary">
-                                Success
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-warning text-tertiary">
-                                Warning
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-info text-quaternary">
-                                Info
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-primary-light text-quaternary">
-                                Primary Light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-secondary-light text-quaternary">
-                                Secondary Light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-tertiary-light text-quaternary">
-                                Tertiary light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-danger-light text-tertiary">
-                                Danger light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-success-light text-tertiary">
-                                Success light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-warning-light text-tertiary">
-                                Warning light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-info-light text-tertiary">
-                                Info light
-                                <span class="badge-number bg-quaternary bg-opacity-25">7</span>      
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex-col">
-                        <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Badge Rounded Full</span> <!-- Title -->
-                            <span class="text-xs mb-4"> To use add class <code class="text-danger">.rounded-full</code>.</span> <!-- Description-->
-                        </div>
-                        <div class="flex flex-row gap-2 flex-wrap">
-                            <div class="box-badge rounded-full bg-primary text-quaternary">
-                                Primary
-                            </div>
-                            <div class="box-badge rounded-full bg-secondary text-quaternary">
-                                Secondary
-                            </div>
-                            <div class="box-badge rounded-full bg-tertiary text-quaternary">
-                                Tertiary
-                            </div>
-                            <div class="box-badge rounded-full bg-danger text-quaternary">
-                                Danger
-                            </div>
-                            <div class="box-badge rounded-full bg-success text-quaternary">
-                                Success
-                            </div>
-                            <div class="box-badge rounded-full bg-warning text-tertiary">
-                                Warning
-                            </div>
-                            <div class="box-badge rounded-full bg-info text-quaternary">
-                                Info
-                            </div>
-                            <div class="box-badge rounded-full bg-primary-light text-quaternary">
-                                Primary Light
-                            </div>
-                            <div class="box-badge rounded-full bg-secondary-light text-quaternary">
-                                Secondary Light
-                            </div>
-                            <div class="box-badge rounded-full bg-tertiary-light text-quaternary">
-                                Tertiary light
-                            </div>
-                            <div class="box-badge rounded-full bg-danger-light text-tertiary">
-                                Danger light
-                            </div>
-                            <div class="box-badge rounded-full bg-success-light text-tertiary">
-                                Success light
-                            </div>
-                            <div class="box-badge rounded-full bg-warning-light text-tertiary">
-                                Warning light
-                            </div>
-                            <div class="box-badge rounded-full bg-info-light text-tertiary">
-                                Info light
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex-col">
-                        <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Badge with Number</span> <!-- Title -->
-                            <span class="text-xs mb-4"> To use add class <code class="text-danger">.badge-number</code> (e.g., .badge-number .bg-success).</span> <!-- Description-->
-                        </div>
-                        <div class="flex flex-row gap-2 flex-wrap">
-                            <div class="box-badge rounded-md bg-primary text-quaternary">
-                                Primary
-                                <span class="icon-badge">
-                                    <i class='bx bx-run bx-xs'></i>  
-                                </span>                                                            
-                            </div>
-                            <div class="box-badge rounded-md bg-secondary text-quaternary">
-                                Secondary
-                                <span class="icon-badge">
-                                    <i class='bx bx-run bx-xs'></i>  
-                                </span>   
-                            </div>
-                            <div class="box-badge rounded-md bg-tertiary text-quaternary">
-                                Tertiary
-                                <span class="icon-badge">
-                                    <i class='bx bx-run bx-xs'></i>  
-                                </span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-danger text-quaternary">
-                                Danger
-                                <span class="icon-badge">
-                                    <i class='bx bxs-radiation bx-xs'></i>  
-                                </span>  
-                            </div>
-                            <div class="box-badge rounded-md bg-success text-quaternary">
-                                Success
-                                <span class="icon-badge">
-                                    <i class='bx bx-check bx-xs'></i>  
-                                </span>    
-                            </div>
-                            <div class="box-badge rounded-md bg-warning text-tertiary">
-                                Warning
-                                <span class="icon-badge">
-                                    <i class='bx bxs-error bx-xs'></i>  
-                                </span>    
-                            </div>
-                            <div class="box-badge rounded-md bg-info text-quaternary">
-                                Info
-                                <span class="icon-badge">
-                                    <i class='bx bxs-error-circle bx-xs'></i>  
-                                </span>    
-                            </div>
-                            <div class="box-badge rounded-md bg-primary-light text-quaternary">
-                                Primary Light
-                                <span class="icon-badge">
-                                    <i class='bx bx-run bx-xs'></i>  
-                                </span>      
-                            </div>
-                            <div class="box-badge rounded-md bg-secondary-light text-quaternary">
-                                Secondary Light
-                                <span class="icon-badge">
-                                    <i class='bx bx-run bx-xs'></i>  
-                                </span>       
-                            </div>
-                            <div class="box-badge rounded-md bg-tertiary-light text-quaternary">
-                                Tertiary light
-                                <span class="icon-badge">
-                                    <i class='bx bx-run bx-xs'></i>  
-                                </span>          
-                            </div>
-                            <div class="box-badge rounded-md bg-danger-light text-tertiary">
-                                Danger light
-                                <span class="icon-badge">
-                                    <i class='bx bxs-radiation bx-xs'></i>  
-                                </span>                              </div>
-                            <div class="box-badge rounded-md bg-success-light text-tertiary">
-                                Success light
-                                <span class="icon-badge">
-                                    <i class='bx bx-check bx-xs'></i>  
-                                </span>                             </div>
-                            <div class="box-badge rounded-md bg-warning-light text-tertiary">
-                                Warning light
-                                <span class="icon-badge">
-                                    <i class='bx bxs-error bx-xs'></i>  
-                                </span>                             </div>
-                            <div class="box-badge rounded-md bg-info-light text-tertiary">
-                                Info light
-                                <span class="icon-badge">
-                                    <i class='bx bxs-error-circle bx-xs'></i>  
-                                </span>                             </div>
+                            <button class="btn-primary-md">Primary</button>         
+                            <button class="btn-primary-md">Primary</button>  
+                            <button class="btn-primary-md">Primary</button>              
+                            <button class="btn-primary-md">Primary</button>  
                         </div>
                     </div>
                 </div>
@@ -627,6 +388,23 @@
         </main>
         <!-- end main -->
         
+        <!-- modal -->
+        <!-- <div class="modal">
+            <div class="card bg-warning w-80">
+                <h1>Lorem Ipsum</h1>
+                <span>
+                    It is a long established fact that a reader will be distracted by the readable content of 
+                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less 
+                    normal distribution of letters, as opposed to using 'Content here, content here', making it look 
+                    like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum 
+                    as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in 
+                    their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on 
+                    purpose (injected humour and the like).
+                </span>
+            </div>
+        </div> -->
+        <!-- end modal -->
+
         <!-- Alpine JS -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <!-- JQuery -->
