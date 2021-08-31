@@ -527,15 +527,15 @@
     /*  sidebar */
     .sidebar
     {
-        @apply absolute ml-4 text-xs h-full bg-quaternary w-3/4 px-4 text-secondary-light sm:w-2/4 lg:w-3/12 lg:relative xl:w-2/12 lg:top-0 lg:px-0;
+        @apply absolute text-xs h-full bg-quaternary pr-4 text-secondary-light lg:relative w-full sm:w-full lg:w-80 xl:w-80 lg:top-0 lg:px-0;
     }
     .sidebar-header
     {
-        @apply flex py-4 justify-between;
+        @apply flex py-4 ml-4 justify-between;
     }
     .sidebar-wrap
     {
-        @apply flex justify-between overflow-y-scroll h-96 2xl:h-full;
+        @apply flex justify-between overflow-y-scroll ml-4 h-auto lg:h-96 2xl:h-full ;
     }
     .sidebar-body
     {
@@ -567,7 +567,7 @@
     }
     .sidebar-footer
     {
-        @apply tracking-widest font-sans my-4;
+        @apply tracking-widest font-sans my-4 ml-4;
     }
     .list
     {
@@ -605,8 +605,17 @@
     }
     .main   
     {
-        @apply mr-4 w-full lg:w-10/12;
+        @apply mx-4 w-full lg:w-full xl:w-full;
     }
+
+
+    /* modal */
+    .modal
+    {
+        @apply absolute z-50 w-full h-full flex justify-center bg-secondary bg-opacity-90;
+    }
+
+
     /* input */
     
 
