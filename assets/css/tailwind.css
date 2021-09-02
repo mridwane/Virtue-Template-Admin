@@ -618,6 +618,42 @@
     {
         @apply absolute z-50 w-full h-full flex justify-center bg-secondary bg-opacity-90;
     }
+    .modal-header
+    {
+        @apply flex justify-between items-center pb-4;
+    }
+    .modal-body
+    {
+        @apply overflow-y-scroll font-poppins py-4;
+    }
+    .modal-footer
+    {
+        @apply flex justify-end pt-4 gap-4;
+    }
+    .modal-card-small
+    {
+        @apply card bg-quaternary font-montserrat w-1/3 p-6 flex-wrap;
+    }
+    .modal-card-medium
+    {
+        @apply card bg-quaternary font-montserrat w-2/3 p-6 flex-wrap;
+    }
+    .modal-card-large
+    {
+        @apply card bg-quaternary font-montserrat w-full p-6 flex-wrap;
+    }
+    .small-modal
+    {
+        @apply h-16;
+    }
+    .medium-modal
+    {
+        @apply h-56;
+    }
+    .large-modal
+    {
+        @apply h-96;
+    }
 
 
     /* input */

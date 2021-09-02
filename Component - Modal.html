@@ -371,14 +371,13 @@
                 <div class="grid lg:grid-cols-2 gap-4">
                     <div class="card flex-col">
                         <div class="h-card">
-                            <span class="tracking-widest font-semibold text-primary mb-4">Simple Modal</span> <!-- Title -->
-                            <span class="text-xs mb-4">use class <code class="text-danger">.list-group</code> to quickly create list group, and use class <code class="text-danger">.list-group-item</code> to create list group items. </span> <!-- Description-->
+                            <span class="tracking-widest font-semibold text-primary mb-4">This is Modal</span> <!-- Title -->
+                            <span class="text-xs mb-4">use available modal</span> <!-- Description-->
                         </div>
                         <div class="flex flex-row gap-2 flex-wrap">
-                            <button class="btn-primary-md">Primary</button>         
-                            <button class="btn-primary-md">Primary</button>  
-                            <button class="btn-primary-md">Primary</button>              
-                            <button class="btn-primary-md">Primary</button>  
+                            <button data-modalButton="default-modal" class="btn-primary-md">Default Modal</button>  
+                            <button data-modalButton="simple-modal" class="btn-primary-md">Simple Modal</button>  
+                            <button data-modalButton="line-modal" class="btn-primary-md">Line Modal</button>        
                         </div>
                     </div>
                 </div>
@@ -388,22 +387,83 @@
         </main>
         <!-- end main -->
         
-        <!-- modal -->
-        <!-- <div class="modal">
-            <div class="card bg-warning w-80">
-                <h1>Lorem Ipsum</h1>
-                <span>
-                    It is a long established fact that a reader will be distracted by the readable content of 
-                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less 
-                    normal distribution of letters, as opposed to using 'Content here, content here', making it look 
-                    like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum 
-                    as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in 
-                    their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on 
-                    purpose (injected humour and the like).
-                </span>
+        <!-- simple modal -->
+        <div class="modal items-center hidden" data-modal="simpleModal">
+            <div class="modal-card-small animate__animated animate__jackInTheBox">
+                <div class="modal-header">
+                    <h1 class="font-bold text-lg">Simple Modal</h1>
+                    <button data-dismiss="modal" class="btn-primary-outline-sm">
+                        <i class='bx bx-x bx-sm'></i>
+                    </button>
+                </div>
+                <div class="modal-body medium-modal">
+                    <span>
+                        There are many variations of passages of Lorem Ipsum available, 
+                        but the majority have suffered alteration in some form, by injected humour, 
+                        or randomised words which don't look even slightly believable. 
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there 
+                        isn't anything embarrassing hidden in the middle of text.
+                    </span>
+                </div>
             </div>
-        </div> -->
-        <!-- end modal -->
+        </div>
+        <!-- end simple modal -->
+
+        <!-- default modal -->
+        <div class="modal items-center hidden" data-modal="defaultModal">
+            <div class="modal-card-small animate__animated animate__jackInTheBox">
+                <div class="modal-header">
+                    <h1 class="font-bold text-lg">Default Modal</h1>
+                    <button data-dismiss="modal" class="btn-primary-outline-sm">
+                        <i class='bx bx-x bx-sm'></i>
+                    </button>
+                </div>
+                <hr class="divider">
+                <div class="modal-body medium-modal">
+                    <span>
+                        There are many variations of passages of Lorem Ipsum available, 
+                        but the majority have suffered alteration in some form, by injected humour, 
+                        or randomised words which don't look even slightly believable. 
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there 
+                        isn't anything embarrassing hidden in the middle of text.
+                    </span>
+                </div>
+                <hr class="divider">
+                <div class="modal-footer">
+                    <button data-dismiss="modal">Close</button>
+                    <button class="btn-primary-md">Save</button>
+                </div>
+            </div>
+        </div>
+        <!-- end default modal -->
+
+        <!-- default modal -->
+        <div class="modal items-center hidden" data-modal="lineModal">
+            <div class="modal-card-small border-4 border-primary animate__animated animate__jackInTheBox">
+                <div class="modal-header">
+                    <h1 class="font-bold text-lg">Line Modal</h1>
+                    <button data-dismiss="modal" class="btn-primary-outline-sm">
+                        <i class='bx bx-x bx-sm'></i>
+                    </button>
+                </div>
+                <hr class="divider">
+                <div class="modal-body medium-modal">
+                    <span>
+                        There are many variations of passages of Lorem Ipsum available, 
+                        but the majority have suffered alteration in some form, by injected humour, 
+                        or randomised words which don't look even slightly believable. 
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there 
+                        isn't anything embarrassing hidden in the middle of text.
+                    </span>
+                </div>
+                <hr class="divider">
+                <div class="modal-footer">
+                    <button data-dismiss="modal">Close</button>
+                    <button class="btn-primary-md">Save</button>
+                </div>
+            </div>
+        </div>
+        <!-- end default modal -->
 
         <!-- Alpine JS -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
