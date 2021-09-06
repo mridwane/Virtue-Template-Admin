@@ -37,5 +37,68 @@ $(document).ready(function(){
     $("[data-modalButton='line-modal']").click(function() {
         $("[data-modal='lineModal']").removeClass("hidden");
     });
-});
 
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='smallModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='small-modal']").click(function() {
+        $("[data-modal='smallModal']").removeClass("hidden");
+    });
+    
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='mediumModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='medium-modal']").click(function() {
+        $("[data-modal='mediumModal']").removeClass("hidden");
+    });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='largeModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='large-modal']").click(function() {
+        $("[data-modal='largeModal']").removeClass("hidden");
+    });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='successModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='success-modal']").click(function() {
+        $("[data-modal='successModal']").removeClass("hidden");
+    });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='dangerModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='danger-modal']").click(function() {
+        $("[data-modal='dangerModal']").removeClass("hidden");
+    });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='warningModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='warning-modal']").click(function() {
+        $("[data-modal='warningModal']").removeClass("hidden");
+    });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='infoModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='info-modal']").click(function() {
+        $("[data-modal='infoModal']").removeClass("hidden");
+    });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='signupModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='signup-modal']").click(function() {
+        $("[data-modal='signupModal']").removeClass("hidden");
+    });
+});

@@ -25,11 +25,12 @@ module.exports = {
         'danger-light': '#F57F7F',
         'success-light': '#60D1AC',
         'warning-light': '#FECC77',
-        'info-light': '#79ADFF'
+        'info-light': '#79ADFF',
 
       },
       boxShadow: {
-        '3xl': '0px 35px 60px 15px rgba(0, 0, 0, 0.3)',
+        'custom': '0px 4px 15px 0px rgba(0,0,0,0.10)',
+        'neumorphism': '5px 5px 18px #d5d2e5, -5px -5px 18px #ffffff',
       },
       transitionDelay: {
         '1': '0.1s',

@@ -33,7 +33,7 @@
         <div id="sidebar" class="sidebar" x-show="sidebar" :class="sidebar ? 'hidden lg:block' : 'block lg:hidden'" x-transition:enter="animate__animated animate__bounceInLeft"> 
             <div class="sidebar-header">
                 <a href="#" class="flex items-center lg:justify-center">
-                    <div class="flex justify-center items-center box-content bg-quaternary shadow-lg h-10 w-10 rounded-xl mr-4">
+                    <div class="flex justify-center items-center box-content bg-quaternary shadow-neumorphism h-10 w-10 rounded-xl mr-4">
                         <!-- For character logo-->
                         <!-- <span class="text-primary font-black text-2xl">V</span>  -->
                         <!-- For image logo-->
@@ -44,7 +44,7 @@
                     </span>
                 </a>
                 <div class="block lg:hidden">
-                    <button class="flex justify-center items-center py-2 box-content bg-quaternary shadow-lg w-10 rounded-xl" @click="sidebar = false">
+                    <button class="flex justify-center items-center py-2 box-content bg-quaternary shadow-neumorphism w-10 rounded-xl" @click="sidebar = false">
                         <i class='bx bx-x bx-sm text-primary'></i>
                     </button>
                 </div>
@@ -169,7 +169,7 @@
                                 <i class='bx bxs-inbox bx-sm bx-tada-hover text-primary' ></i>
                             </button>
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
-                                <div class="w-60 h-auto p-4 bg-quaternary shadow-md text-tertiary rounded-lg">
+                                <div class="w-60 h-auto p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
                                     <a href="#" class="flex justify-start p-2">
                                         <img src="assets/img/faces/1.jpg" class="rounded-full h-10 w-10" alt="">
                                         <div class="flex flex-col w-60">
@@ -208,7 +208,7 @@
                                 <i class='bx bxs-notification bx-sm bx-tada-hover text-primary' ></i>
                             </button>
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
-                                <div class="w-60 h-auto p-4 bg-quaternary shadow-md text-tertiary rounded-lg">
+                                <div class="w-60 h-auto p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
                                     <a href="#" class="flex justify-start p-2">
                                         <div class="card-icon p-2 bg-danger text-quaternary">
                                             <i class='bx bx-shape-circle bx-sm'></i>
@@ -259,7 +259,7 @@
                             <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
                         </button>
                         <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
-                            <div class="w-60 h-w-60 p-4 bg-quaternary shadow-md text-tertiary rounded-lg">
+                            <div class="w-60 h-w-60 p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
                                 <a href="#" class="flex-card">
                                     <div class="card-icon">
                                         <i class='bx bxs-user-circle bx-sm text-primary' ></i>
@@ -301,7 +301,7 @@
                             </button>
                             
                             <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition:enter="animate__animated animate__bounceInDown" x-transition:leave="animate__animated animate__bounceOutUp">
-                                <div class="w-60 h-w-60 p-4 bg-quaternary shadow-md text-tertiary rounded-lg">
+                                <div class="w-60 h-w-60 p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
                                     <div class="flex-card">
                                         <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
                                             <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
@@ -354,7 +354,7 @@
             <!-- end nav -->     
             
             <!-- section -->
-            <section>
+            <section class="section">
                 <!-- header -->
                 <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
                     <div class="flex justify-start">
@@ -372,12 +372,41 @@
                     <div class="card flex-col">
                         <div class="h-card">
                             <span class="tracking-widest font-semibold text-primary mb-4">This is Modal</span> <!-- Title -->
-                            <span class="text-xs mb-4">use available modal</span> <!-- Description-->
                         </div>
                         <div class="flex flex-row gap-2 flex-wrap">
                             <button data-modalButton="default-modal" class="btn-primary-md">Default Modal</button>  
                             <button data-modalButton="simple-modal" class="btn-primary-md">Simple Modal</button>  
                             <button data-modalButton="line-modal" class="btn-primary-md">Line Modal</button>        
+                        </div>
+                    </div>
+                    <div class="card flex-col">
+                        <div class="h-card">
+                            <span class="tracking-widest font-semibold text-primary mb-4">Modal Size</span> <!-- Title -->
+                        </div>
+                        <div class="flex flex-row gap-2 flex-wrap">
+                            <button data-modalButton="small-modal" class="btn-secondary-md">Small Modal</button>  
+                            <button data-modalButton="medium-modal" class="btn-secondary-md">Medium Modal</button>  
+                            <button data-modalButton="large-modal" class="btn-secondary-md">Large Modal</button>        
+                        </div>
+                    </div>
+                    <div class="card flex-col">
+                        <div class="h-card">
+                            <span class="tracking-widest font-semibold text-primary mb-4">Alert Modal</span> <!-- Title -->
+                        </div>
+                        <div class="flex flex-row gap-2 flex-wrap">
+                            <button data-modalButton="success-modal" class="btn-success-md">Success Alert Modal</button>  
+                            <button data-modalButton="danger-modal" class="btn-danger-md">Danger Alert Modal</button>        
+                            <button data-modalButton="warning-modal" class="btn-warning-md">Warning Alert Modal</button>     
+                            <button data-modalButton="info-modal" class="btn-info-md">Info Alert Modal</button>     
+                        </div>
+                    </div>
+                    <div class="card flex-col">
+                        <div class="h-card">
+                            <span class="tracking-widest font-semibold text-primary mb-4">Modal Authentication</span> <!-- Title -->
+                        </div>
+                        <div class="flex flex-row gap-2 flex-wrap">
+                            <button data-modalButton="signup-modal" class="btn-tertiary-md">Modal SignUp</button>  
+                            <button data-modalButton="signin-modal" class="btn-tertiary-md">Modal SignIn</button>   
                         </div>
                     </div>
                 </div>
@@ -389,7 +418,7 @@
         
         <!-- simple modal -->
         <div class="modal items-center hidden" data-modal="simpleModal">
-            <div class="modal-card-small animate__animated animate__jackInTheBox">
+            <div class="modal-card-medium animate__animated animate__jackInTheBox">
                 <div class="modal-header">
                     <h1 class="font-bold text-lg">Simple Modal</h1>
                     <button data-dismiss="modal" class="btn-primary-outline-sm">
@@ -411,7 +440,7 @@
 
         <!-- default modal -->
         <div class="modal items-center hidden" data-modal="defaultModal">
-            <div class="modal-card-small animate__animated animate__jackInTheBox">
+            <div class="modal-card-medium animate__animated animate__jackInTheBox">
                 <div class="modal-header">
                     <h1 class="font-bold text-lg">Default Modal</h1>
                     <button data-dismiss="modal" class="btn-primary-outline-sm">
@@ -437,11 +466,57 @@
         </div>
         <!-- end default modal -->
 
-        <!-- default modal -->
+        <!-- line modal -->
         <div class="modal items-center hidden" data-modal="lineModal">
-            <div class="modal-card-small border-4 border-primary animate__animated animate__jackInTheBox">
+            <div class="modal-card-medium border-4 border-primary animate__animated animate__jackInTheBox">
                 <div class="modal-header">
                     <h1 class="font-bold text-lg">Line Modal</h1>
+                    <button data-dismiss="modal" class="btn-primary-outline-sm">
+                        <i class='bx bx-x bx-sm'></i>
+                    </button>
+                </div>
+                <hr class="divider">
+                <div class="modal-body medium-modal">
+                    <span>
+                        There are many variations of passages of Lorem Ipsum available, 
+                        but the majority have suffered alteration in some form, by injected humour, 
+                        or randomised words which don't look even slightly believable. 
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there 
+                        isn't anything embarrassing hidden in the middle of text.
+                    </span>
+                </div>
+                <hr class="divider">
+                <div class="modal-footer font-semibold">
+                    <button data-dismiss="modal">Close</button>
+                    <button class="btn-primary-md">Save</button>
+                </div>
+            </div>
+        </div>
+        <!-- end line modal -->
+
+        <!-- small modal -->
+        <div class="modal items-center hidden" data-modal="smallModal">
+            <div class="modal-card-small animate__animated animate__jackInTheBox">
+                <div class="modal-header">
+                    <h1 class="font-bold text-lg">Small Modal</h1>
+                    <button data-dismiss="modal" class="btn-primary-outline-sm">
+                        <i class='bx bx-x bx-sm'></i>
+                    </button>
+                </div>
+                <div class="modal-body small-modal">
+                    <span>
+                        Hello World...
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- end small modal -->
+
+        <!-- medium modal -->
+        <div class="modal items-center hidden" data-modal="mediumModal">
+            <div class="modal-card-medium animate__animated animate__jackInTheBox">
+                <div class="modal-header">
+                    <h1 class="font-bold text-lg">Medium Modal</h1>
                     <button data-dismiss="modal" class="btn-primary-outline-sm">
                         <i class='bx bx-x bx-sm'></i>
                     </button>
@@ -463,7 +538,136 @@
                 </div>
             </div>
         </div>
-        <!-- end default modal -->
+        <!-- end medium modal -->
+
+        <!-- large modal -->
+        <div class="modal items-center hidden" data-modal="largeModal">
+            <div class="modal-card-large border-4 border-primary animate__animated animate__jackInTheBox">
+                <div class="modal-header">
+                    <h1 class="font-bold text-lg">Large Modal</h1>
+                    <button data-dismiss="modal" class="btn-primary-outline-sm">
+                        <i class='bx bx-x bx-sm'></i>
+                    </button>
+                </div>
+                <hr class="divider">
+                <div class="modal-body large-modal">
+                    <span>
+                        There are many variations of passages of Lorem Ipsum available, 
+                        but the majority have suffered alteration in some form, by injected humour, 
+                        or randomised words which don't look even slightly believable. 
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there 
+                        isn't anything embarrassing hidden in the middle of text.
+                    </span>
+                </div>
+                <hr class="divider">
+                <div class="modal-footer font-semibold">
+                    <button data-dismiss="modal">Close</button>
+                    <button class="btn-primary-md">Save</button>
+                </div>
+            </div>
+        </div>
+        <!-- end large modal -->
+
+        <!-- success alert modal -->
+        <div class="modal items-center hidden" data-modal="successModal">
+            <div class="alert-modal animate__animated animate__jackInTheBox">
+                <div class="alert-modal-header">
+                    <img src="assets/img/illustration/success.png" class="w-60" alt="">
+                </div>
+                <div class="alert-modal-body">
+                    <h1 class="font-bold text-xl mb-4">Congratulations!</h1>
+                    <span>
+                        This is modal success.
+                    </span>
+                </div>                
+                <hr class="divider">
+                <div class="alert-modal-footer">
+                    <button data-dismiss="modal" class="btn-success-md">Done</button>
+                </div>
+            </div>
+        </div>
+        <!-- end success alert modal -->
+
+        <!-- danger alert modal -->
+        <div class="modal items-center hidden" data-modal="dangerModal">
+            <div class="alert-modal animate__animated animate__jackInTheBox">
+                <div class="alert-modal-header">
+                    <img src="assets/img/illustration/danger.png" class="w-60" alt="">
+                </div>
+                <div class="alert-modal-body">
+                    <h1 class="font-bold text-xl mb-4">Error!</h1>
+                    <span>
+                        This is modal danger.
+                    </span>
+                </div>                
+                <hr class="divider">
+                <div class="alert-modal-footer">
+                    <button data-dismiss="modal" class="btn-danger-md">OK</button>
+                </div>
+            </div>
+        </div>
+        <!-- end danger alert modal -->
+
+        <!-- warning alert modal -->
+        <div class="modal items-center hidden" data-modal="warningModal">
+            <div class="alert-modal animate__animated animate__jackInTheBox">
+                <div class="alert-modal-header">
+                    <div class="flex justify-center">
+                        <img src="assets/img/illustration/warning.png" class="w-60" alt="">
+                    </div>
+                </div>
+                <div class="alert-modal-body">
+                    <h1 class="font-bold text-xl mb-4">Warning!</h1>
+                    <span>
+                        This is modal warning.
+                    </span>
+                </div>                
+                <hr class="divider">
+                <div class="alert-modal-footer">
+                    <button data-dismiss="modal" class="btn-warning-md">OK</button>
+                </div>
+            </div>
+        </div>
+        <!-- end warning alert modal -->
+
+        <!-- info alert modal -->
+        <div class="modal items-center hidden" data-modal="infoModal">
+            <div class="alert-modal animate__animated animate__jackInTheBox">
+                <div class="alert-modal-header">
+                    <div class="flex justify-center">
+                        <img src="assets/img/illustration/info.png" class="w-60" alt="">
+                    </div>
+                </div>
+                <div class="alert-modal-body">
+                    <h1 class="font-bold text-xl mb-4">Info!</h1>
+                    <span>
+                        This is modal info.
+                    </span>
+                </div>                
+                <hr class="divider">
+                <div class="alert-modal-footer">
+                    <button data-dismiss="modal" class="btn-info-md">OK</button>
+                </div>
+            </div>
+        </div>
+        <!-- end info alert modal -->
+
+        <!-- signup modal -->
+        <div class="modal items-center hidden" data-modal="signupModal">
+            <div class="box-content rounded-xl bg-quaternary p-4 animate__animated animate__jackInTheBox">
+                <div class="flex justify-center">
+                    <img src="assets/img/logo_virtue.png" class="w-10" alt="">
+                </div>                
+                <div class="flex justify-center flex-col gap-4 mt-4">
+                    <h1 class="text-center">Sign Up</h1>
+                    <div class="flex justify-center flex-col gap-4">
+                        <input type="text" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your name...">
+                        <input type="text" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your email...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end signup modal -->
 
         <!-- Alpine JS -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
