@@ -101,4 +101,12 @@ $(document).ready(function(){
     $("[data-modalButton='signup-modal']").click(function() {
         $("[data-modal='signupModal']").removeClass("hidden");
     });
+
+    $("[data-dismiss='modal']").click(function() {
+        $("[data-modal='signinModal']").addClass("hidden");
+    });
+
+    $("[data-modalButton='signin-modal']").click(function() {
+        $("[data-modal='signinModal']").removeClass("hidden");
+    });
 });

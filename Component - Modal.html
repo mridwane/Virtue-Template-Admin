@@ -88,7 +88,7 @@
                                     <a href="Component - Modal.html"> Modal</a>
                                 </li>
                                 <li class="list">
-                                    <a href="Component - Paginaion.html"> Pagination</a>
+                                    <a href="Component - Pagination.html"> Pagination</a>
                                 </li>
                                 <li class="list">
                                     <a href="Component - Tooltip.html"> Tooltip</a>
@@ -654,20 +654,65 @@
 
         <!-- signup modal -->
         <div class="modal items-center hidden" data-modal="signupModal">
-            <div class="box-content rounded-xl bg-quaternary p-4 animate__animated animate__jackInTheBox">
+            <div class="box-content rounded-xl bg-quaternary p-10 animate__animated animate__jackInTheBox">
                 <div class="flex justify-center">
                     <img src="assets/img/logo_virtue.png" class="w-10" alt="">
                 </div>                
-                <div class="flex justify-center flex-col gap-4 mt-4">
-                    <h1 class="text-center">Sign Up</h1>
+                <div class="flex justify-center flex-col gap-10 mt-4">
+                    <h1 class="text-center text-xl font-bold text-primary">Sign Up</h1>
                     <div class="flex justify-center flex-col gap-4">
-                        <input type="text" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your name...">
-                        <input type="text" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your email...">
+                        <div class="flex flex-col gap-2">
+                            <input type="text" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your name...">
+                            <!-- <span class="text-xs font-semibold pl-4 text-danger">text helper</span> -->
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <input type="email" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your email...">
+                            <!-- <span class="text-xs font-semibold pl-4 text-danger">text helper</span> -->
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <input type="password" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your password...">
+                            <!-- <span class="text-xs font-semibold pl-4 text-danger">text helper</span> -->
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <input type="password" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Confirm Password...">
+                            <!-- <span class="text-xs font-semibold pl-4 text-danger">text helper</span> -->
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <button class="btn-primary-md rounded-full">Sign Up</button>
+                            <button class="btn-secondary-md rounded-full" data-dismiss="modal">Close</button>
+                        </div>                        
                     </div>
                 </div>
             </div>
         </div>
         <!-- end signup modal -->
+
+        <!-- signin modal -->
+        <div class="modal items-center hidden" data-modal="signinModal">
+            <div class="box-content rounded-xl bg-quaternary p-10 animate__animated animate__jackInTheBox">
+                <div class="flex justify-center">
+                    <img src="assets/img/logo_virtue.png" class="w-10" alt="">
+                </div>                
+                <div class="flex justify-center flex-col gap-10 mt-4">
+                    <h1 class="text-center text-xl font-bold text-primary">Sign In</h1>
+                    <div class="flex justify-center flex-col gap-4">
+                        <div class="flex flex-col gap-2">
+                            <input type="email" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your email...">
+                            <!-- <span class="text-xs font-semibold pl-4 text-danger">text helper</span> -->
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <input type="password" class="bg-quaternary py-2 px-6 rounded-full border-2 shadow-neumorphism focus:outline-none focus:border-primary tracking-widest" placeholder="Enter your password...">
+                            <!-- <span class="text-xs font-semibold pl-4 text-danger">text helper</span> -->
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <button class="btn-primary-md rounded-full">Sign In</button>
+                            <button class="btn-secondary-md rounded-full" data-dismiss="modal">Close</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end signin modal -->
 
         <!-- Alpine JS -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
