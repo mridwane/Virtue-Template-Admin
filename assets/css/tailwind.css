@@ -527,7 +527,7 @@
     }
     .pagination-list-disabled
     {
-        @apply flex items-center justify-center box-content bg-secondary-light text-quaternary tracking-widest rounded-md pointer-events-none;
+        @apply flex items-center justify-center box-content bg-primary-light text-quaternary tracking-widest rounded-md pointer-events-none;
     }
 
 
