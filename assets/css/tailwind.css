@@ -700,9 +700,155 @@
         @apply h-96;
     }
 
-
     /* input */
-    
+    .input-r-sm
+    {
+        @apply bg-purple-100 py-2 px-6 rounded-md border-2 border-purple-300 tracking-widest w-full disabled:bg-purple-200;
+    }
+    .input-r-md
+    {
+        @apply bg-purple-100 py-2 px-6 rounded-lg border-2 border-purple-300 tracking-widest w-full disabled:bg-purple-200;
+    }
+    .input-r-lg
+    {
+        @apply bg-purple-100 py-2 px-6 rounded-xl border-2 border-purple-300 tracking-widest w-full disabled:bg-purple-200;
+    }
+    .input-r-full
+    {
+        @apply bg-purple-100 py-2 px-6 rounded-full border-2 border-purple-300 tracking-widest w-full disabled:bg-purple-200;
+    }
+    .focus-primary
+    {
+        @apply focus:outline-none focus:border-primary;
+    }
+    .focus-secondary
+    {
+        @apply focus:outline-none focus:border-secondary;
+    }
+    .focus-tertiary
+    {
+        @apply focus:outline-none focus:border-tertiary;
+    }
+    .focus-success
+    {
+        @apply focus:outline-none focus:border-success;
+    }
+    .focus-danger
+    {
+        @apply focus:outline-none focus:border-danger;
+    }
+    .focus-warning
+    {
+        @apply focus:outline-none focus:border-warning;
+    }
+    .focus-info
+    {
+        @apply focus:outline-none focus:border-info;
+    }
+    .helper-primary
+    {
+        @apply text-xs font-medium text-primary;
+    }
+    .helper-secondary
+    {
+        @apply text-xs font-medium text-secondary;
+    }
+    .helper-danger
+    {
+        @apply text-xs font-medium text-danger;
+    }
+    .helper-success
+    {
+        @apply text-xs font-medium text-success;
+    }
+    .helper-warning
+    {
+        @apply text-xs font-medium text-warning;
+    }
+    .helper-info
+    {
+        @apply text-xs font-medium text-info;
+    }
+    .cb-primary
+    {
+        @apply text-primary bg-quaternary border-2 border-primary rounded-sm disabled:opacity-50;
+    }
+    .cb-secondary
+    {
+        @apply text-secondary bg-quaternary border-2 border-secondary rounded-sm disabled:opacity-50;
+    }
+    .cb-tertiary
+    {
+        @apply text-tertiary bg-quaternary border-2 border-tertiary rounded-sm disabled:opacity-50;
+    }
+    .cb-danger
+    {
+        @apply text-danger bg-quaternary border-2 border-danger rounded-sm disabled:opacity-50;
+    }
+    .cb-success
+    {
+        @apply text-success bg-quaternary border-2 border-success rounded-sm disabled:opacity-50;
+    }
+    .cb-warning
+    {
+        @apply text-warning bg-quaternary border-2 border-warning rounded-sm disabled:opacity-50;
+    }
+    .cb-info
+    {
+        @apply text-info bg-quaternary border-2 border-info rounded-sm disabled:opacity-50;
+    }
+    .cb-sm  
+    {
+        @apply h-4 w-4;
+    }
+    .cb-md  
+    {
+        @apply h-6 w-6;
+    }
+    .cb-lg  
+    {
+        @apply h-8 w-8;
+    }
+    .rb-primary
+    {
+        @apply text-primary bg-quaternary border-2 border-primary rounded-full disabled:opacity-50;
+    }
+    .rb-secondary
+    {
+        @apply text-secondary bg-quaternary border-2 border-secondary rounded-full disabled:opacity-50;
+    }
+    .rb-tertiary
+    {
+        @apply text-tertiary bg-quaternary border-2 border-tertiary rounded-full disabled:opacity-50;
+    }
+    .rb-danger
+    {
+        @apply text-danger bg-quaternary border-2 border-danger rounded-full disabled:opacity-50;
+    }
+    .rb-success
+    {
+        @apply text-success bg-quaternary border-2 border-success rounded-full disabled:opacity-50;
+    }
+    .rb-warning
+    {
+        @apply text-warning bg-quaternary border-2 border-warning rounded-full disabled:opacity-50;
+    }
+    .rb-info
+    {
+        @apply text-info bg-quaternary border-2 border-info rounded-full disabled:opacity-50;
+    }
+    .rb-sm  
+    {
+        @apply h-4 w-4;
+    }
+    .rb-md  
+    {
+        @apply h-6 w-6;
+    }
+    .rb-lg  
+    {
+        @apply h-8 w-8;
+    }
 
 
 @tailwind utilities;

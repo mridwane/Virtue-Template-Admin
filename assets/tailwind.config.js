@@ -45,11 +45,12 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ['focus'],
-      borderColor: ['focus'],
+      backgroundColor: ['focus', 'checked', 'disabled'],
+      borderColor: ['focus', 'checked'],
       borderRadius: ['hover', 'focus', 'active'],
       display: ['hover', 'focus', 'active'],
       margin: ['hover', 'focus', 'active'],
+      opacity: ['disabled'],
       padding: ['hover', 'focus', 'active'],
       textColor: ['focus'],
       transitionTimingFunction: ['hover', 'focus'],
@@ -58,5 +59,8 @@ module.exports = {
       width: ['hover', 'focus', 'active'],
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require('@tailwindcss/custom-forms')
+  ],
 }
