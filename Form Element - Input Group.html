@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="assets/img/logo_virtue.png">
+        <title>Virtue - Input Group</title>
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <link href="assets/dist/tailwind.css" rel="stylesheet">
+        <!-- Icons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+    </head>    
+    <body class="full-body" x-data="{sidebar: true}">
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader-border">
+                <div class="preloader-dot"></div>
+            </div>
+            <span class="preloader-text">Loading</span>
+        </div>    
+        <!-- end preloader -->
+
+        <!-- sidebar -->
+        <div id="sidebar" class="sidebar" x-show="sidebar" :class="sidebar ? 'hidden lg:block' : 'block lg:hidden'" x-transition:enter="animate__animated animate__bounceInLeft"> 
+            <div class="sidebar-header">
+                <a href="#" class="flex items-center lg:justify-center">
+                    <div class="flex justify-center items-center box-content bg-quaternary shadow-neumorphism h-10 w-10 rounded-xl mr-4">
+                        <!-- For character logo-->
+                        <!-- <span class="text-primary font-black text-2xl">V</span>  -->
+                        <!-- For image logo-->
+                        <img src="assets/img/logo_virtue.png" class="w-7 h-7" alt="logo">
+                    </div>
+                    <span class="tracking-widest text-primary text-xl font-semibold lg:text-2xl">
+                        Virtue
+                    </span>
+                </a>
+                <div class="block lg:hidden">
+                    <button class="flex justify-center items-center py-2 box-content bg-quaternary shadow-neumorphism w-10 rounded-xl" @click="sidebar = false">
+                        <i class='bx bx-x bx-sm text-primary'></i>
+                    </button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="sidebar-wrap">
+                <div class="sidebar-body">
+                    <ul>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-item-link">
+                                <i class='bx bxs-dashboard bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bxs-component bx-xs'></i>               
+                                <span class="sidebar-item-text line-clamp-1">Component</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Component - Alert.html"> Alert</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Badge.html"> Badge</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Button.html"> Button</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Card.html"> Card</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Colors.html"> Color</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - List Group.html"> List Group</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Modal.html"> Modal</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Pagination.html"> Pagination</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Tooltip.html"> Tooltip</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: true }">
+                            <button class="sidebar-list-link active" @click="open = !open">
+                                <i class='bx bx-clipboard bx-xs'></i>            
+                                <span class="sidebar-item-text line-clamp-1">Form Element</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Form Element - Input.html"> Input</a>
+                                </li>
+                                <li class="list-active">
+                                    <a href="Form Element - Input Group.html"> Input Group</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="card">
+                    <span>
+                        All Rights Reserved by <a href="#" class="text-primary font-semibold">Riddesain.</a> 
+                        Designed and Developed by <a href="#" class="text-primary font-semibold">Ridwan.</a> 
+                        Under License <a href="#" class="text-primary font-semibold">MIT.</a>
+                    </span>
+                </div>
+                <div class="card flex justify-center">
+                    <span class="font-medium text-primary">
+                        Virtue 1.0.0
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- end sidebar -->
+
+        <!-- main -->
+        <main class="main" x-bind:class="{'lg:w-full': ! sidebar }" >
+            <!-- nav -->
+            <nav class="flex justify-between">            
+                <div class="py-4">
+                    <div class="flex flex-row ">
+                        <button class="flex btn-icon lg:hidden" @click="sidebar = true" id="btn-sidebar">
+                            <i class='bx bx-menu bx-sm text-primary'></i>
+                        </button>
+                        <button class="lg:flex btn-icon hidden" @click="sidebar = !sidebar" id="btn-sidebar">
+                            <i class='bx bx-menu bx-sm text-primary'></i>
+                        </button>
+                        <div class="hidden lg:block">
+                            <div class="search">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class='bx bx-search-alt bx-sm' ></i>
+                                </button>
+                            </div>  
+                        </div>                
+                    </div>
+                </div> 
+                <div class="hidden lg:block w-3/12 py-4">
+                    <div class="flex justify-start">
+                        <div class="flex justify-start" x-data="{ open: false }">
+                            <button class="flex btn-icon" @click="open = ! open">
+                                <span class="notif-dot-success animate-ping"></span>
+                                <i class='bx bxs-inbox bx-sm bx-tada-hover text-primary' ></i>
+                            </button>
+                            <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
+                                <div class="w-60 h-auto p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                    <a href="#" class="flex justify-start p-2">
+                                        <img src="assets/img/faces/1.jpg" class="rounded-full h-10 w-10" alt="">
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Rey</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Hi, I need your help.</p>
+                                            <span class="px-2 font-light text-xs">07:00 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <img src="assets/img/faces/2.jpg" class="rounded-full h-10 w-10" alt="">
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Mike</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Can we meet tonight?.</p>
+                                            <span class="px-2 font-light text-xs">07:05 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <img src="assets/img/faces/5.jpg" class="rounded-full h-10 w-10" alt="">
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md line-clamp-1">Verra</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">What will you do today?</p>
+                                            <span class="px-2 font-light text-xs">07:54 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <hr class="border-gray-300 max-w-7xl">
+                                    <div class="flex justify-center items-center pt-4">
+                                        <a href="#" class="px-2 font-medium">Check all message</a>
+                                        <i class='bx bxs-right-arrow-circle bx-xs'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start" x-data="{ open: false }">
+                            <button class="flex btn-icon lg:h-10 lg:w-10" @click="open = ! open">
+                                <span class="notif-dot-warning animate-ping"></span>
+                                <i class='bx bxs-notification bx-sm bx-tada-hover text-primary' ></i>
+                            </button>
+                            <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
+                                <div class="w-60 h-auto p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                    <a href="#" class="flex justify-start p-2">
+                                        <div class="card-icon p-2 bg-danger text-quaternary">
+                                            <i class='bx bx-shape-circle bx-sm'></i>
+                                        </div>  
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Jhon</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Jhon has made an access request.</p>
+                                            <span class="px-2 font-light text-xs">09:00 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <div class="card-icon p-2 bg-info text-quaternary">
+                                            <i class='bx bx-slider-alt bx-sm'></i>
+                                        </div>
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Setting</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">You have customized this template.</p>
+                                            <span class="px-2 font-light text-xs">09:20 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <div class="card-icon p-2 bg-success text-quaternary">
+                                            <i class='bx bx-paste bx-sm'></i>
+                                        </div>
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md line-clamp-1">Event Today</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Just a reminder that you have event.</p>
+                                            <span class="px-2 font-light text-xs">09:24 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <hr class="border-gray-300 max-w-7xl">
+                                    <div class="flex justify-center items-center pt-4">
+                                        <a href="#" class="px-2 font-medium">Check all notifcation</a>
+                                        <i class='bx bxs-right-arrow-circle bx-xs'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+                <div class="hidden lg:block w-9/12 ">
+                    <div x-data="{ open: false }" class="flex justify-end py-4">
+                        <div class="hidden lg:block">
+                            <p class="font-semibold py-2 px-4 tracking-wider">Hi, Muhammad</p>
+                        </div>                        
+                        <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
+                            <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
+                        </button>
+                        <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
+                            <div class="w-60 h-w-60 p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                <a href="#" class="flex-card">
+                                    <div class="card-icon">
+                                        <i class='bx bxs-user-circle bx-sm text-primary' ></i>
+                                    </div>
+                                    <span class="px-2 font-medium">Profile</span>
+                                </a>
+                                <a href="#" class="flex-card">
+                                    <div class="card-icon">
+                                        <i class='bx bx-slider-alt bx-sm text-primary'></i>
+                                    </div>
+                                    <span class="px-2 font-medium">Setting</span>
+                                </a>
+                                <hr class="border-gray-300">
+                                <a href="#" class="flex-card">
+                                    <div class="card-icon">
+                                        <i class='bx bx-exit bx-sm text-primary'></i>
+                                    </div>
+                                    <span class="px-2 font-medium ">logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- for mobile -->
+                <div class="flex flex-grow items-center justify-center">
+                    <div class="block lg:hidden"> 
+                        <a href="#" class="flex items-center justify-center">
+                            <span class="tracking-widest text-primary text-lg font-semibold ">
+                                Virtue
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-none">
+                    <div class="block lg:hidden "> 
+                        <div x-data="{ open: false }" class="flex justify-end py-4">                                             
+                            <button class="flex btn-icon" @click="open = ! open">
+                                <i class='bx bx-dots-horizontal-rounded bx-sm text-primary' ></i>
+                            </button>
+                            
+                            <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition:enter="animate__animated animate__bounceInDown" x-transition:leave="animate__animated animate__bounceOutUp">
+                                <div class="w-60 h-w-60 p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                    <div class="flex-card">
+                                        <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
+                                            <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
+                                        </button>
+                                        <p class="flex justify-center items-center font-semibold px-4 tracking-wider">Hi, Muhammad</p>                                    
+                                    </div>
+                                    <hr class="divider">
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <span class="notif-dot-success"></span>
+                                            <i class='bx bxs-inbox bx-sm text-primary' ></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Inbox</span>
+                                    </a>
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <span class="notif-dot-warning"></span>
+                                            <i class='bx bxs-notification bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Notification</span>
+                                    </a>
+                                    <hr class="divider">                                        
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <i class='bx bxs-user-circle bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Profile</span>
+                                    </a>
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <i class='bx bx-slider-alt bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Setting</span>
+                                    </a>
+                                    <hr class="border-gray-300">
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <i class='bx bx-exit bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium ">logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end for mobile -->
+            </nav>
+            <hr class="divider">
+            <!-- end nav -->     
+            
+            <!-- section -->
+            <section class="section">
+                <!-- header -->
+                <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
+                    <div class="flex justify-start">
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">Input Group</h1> <!-- Title -->
+                        <span class="text-xs"></span> <!-- Sub Title -->
+                    </div>
+                    <div class="flex justify-end">
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> Input Group</span>
+                    </div>
+                </div>
+                <!-- end header -->
+
+                <!-- body -->
+                <div class="grid gap-4">
+                    <div class="card">
+                        <div class="m-4">
+                            <h1 class="font-bold text-tertiary font-montserrat text-lg">Input Group</h1>
+                        </div>
+                        <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4">
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Group</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.input-group </code>
+                                        class to the div, and add <code class="text-danger">.input-group-item</code> class to input inside div,
+                                        and also add the <code class="text-danger">.input-group-icon</code> class to add the icon in the div. 
+                                    </span> <!-- Description-->                               
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group r-sm bg-primary">
+                                        <div class="input-group-icon">
+                                            <i class='bx bx-user bx-xs'></i> 
+                                        </div>
+                                        <input type="text" class="input-group-item focus-primary r-l-sm" placeholder="Name" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Group Rounded Small</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.r-sm</code>
+                                        class to the div e.g. <code class="text-danger">input-group r-sm</code>, and add <code class="text-danger">.r-l-sm</code> e.g. 
+                                        <code class="text-danger">input-group-item r-l-sm</code>  class to input inside div.
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-primary r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-primary r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Group Rounded Medium</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.r-md</code>
+                                        class to the div e.g. <code class="text-danger">input-group r-md</code>, and add <code class="text-danger">.r-l-md</code> e.g. 
+                                        <code class="text-danger">input-group-item r-l-md</code>  class to input inside div.
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-primary r-md">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-primary r-l-md" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Group Rounded Full</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.r-full</code>
+                                        class to the div e.g. <code class="text-danger">input-group r-full</code>, and add <code class="text-danger">.r-l-full</code> e.g. 
+                                        <code class="text-danger">input-group-item r-l-full</code>  class to input inside div.
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-primary r-full">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-primary r-l-full" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Group Addon Right</span> <!-- Title -->
+                                    <span class="text-xs mb-4">change the class <code class="text-danger">.r-l-sm</code> to <code class="text-danger">.r-r-sm</code> and change the position of the input and icon to change it to right
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-primary r-full">
+                                        <input type="text" class="input-group-item focus-primary r-r-full" placeholder="price" required>
+                                        <div class="input-group-icon">
+                                            <span>,00</span>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Group Addon Left & Right</span> <!-- Title -->
+                                    <span class="text-xs mb-4">remove <code class="text-danger">.r-r-sm</code> or <code class="text-danger">.r-l-sm</code> class and add icon.
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-primary r-full">
+                                        <div class="input-group-icon">
+                                            <span>Rp.</span>
+                                        </div>  
+                                        <input type="text" class="input-group-item focus-primary" placeholder="price" required>
+                                        <div class="input-group-icon">
+                                            <span>,00</span>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Primary</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-primary</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-primary r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-primary r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Secondary</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-secondary</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-secondary r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-secondary r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Tertiary</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-tertiary</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-tertiary r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-tertiary r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Danger</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-danger</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-danger r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-danger r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Success</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-success</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-success r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-success r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Warning</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-warning</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-warning r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-warning r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card flex-col flex-wrap">
+                                <div class="h-card">
+                                    <span class="tracking-widest font-semibold text-primary mb-4">Input Color Info</span> <!-- Title -->
+                                    <span class="text-xs mb-4">To use add <code class="text-danger">.bg-{color}</code> class on div, e.g. 
+                                        <code class="text-danger">input-group bg-info</code>                                    
+                                    </span> <!-- Description-->
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="input-group bg-info r-sm">
+                                        <div class="input-group-icon">
+                                            <span>@</span>
+                                        </div>
+                                        <input type="text" class="input-group-item focus-info r-l-sm" placeholder="username" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end body -->
+            </section>
+            <!-- end section -->
+        </main>
+        <!-- end main -->
+        
+
+        <!-- Alpine JS -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <!-- JQuery -->
+        <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
