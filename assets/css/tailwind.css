@@ -898,4 +898,406 @@
         @apply rounded-l-full;
     }
 
+    /* table */
+    .table-responsive-default
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-default table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-default thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-default tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-default th
+    {
+        @apply border border-primary px-4 py-2 ;
+    }
+    .table-responsive-default td
+    {
+        @apply border border-primary px-4 py-2 ;
+    }
+    .table-responsive-default tbody > tr
+    {
+        @apply hover:bg-purple-200 hover:text-tertiary;
+    }
+    .table-responsive-primary
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-primary table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-primary thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-primary tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-primary th
+    {
+        @apply border border-primary px-4 py-2 ;
+    }
+    .table-responsive-primary td
+    {
+        @apply border border-primary px-4 py-2 ;
+    }
+    .table-responsive-primary tbody > tr
+    {
+        @apply hover:bg-purple-500 hover:text-quaternary;
+    }
+    .table-responsive-primary thead
+    {
+        @apply bg-primary text-quaternary;
+    }
+    .table-responsive-primary tfoot
+    {
+        @apply bg-primary text-quaternary;
+    }
+    .table-responsive-primary tr:nth-child(even)
+    {
+        @apply bg-purple-300 ;
+    }
+
+    .table-responsive-secondary
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-secondary table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-secondary thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-secondary tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-secondary th
+    {
+        @apply border border-secondary px-4 py-2 ;
+    }
+    .table-responsive-secondary td
+    {
+        @apply border border-secondary px-4 py-2 ;
+    }
+    .table-responsive-secondary tbody > tr
+    {
+        @apply hover:bg-gray-500 hover:text-quaternary;
+    }
+    .table-responsive-secondary thead
+    {
+        @apply bg-secondary text-quaternary;
+    }
+    .table-responsive-secondary tfoot
+    {
+        @apply bg-secondary text-quaternary;
+    }
+    .table-responsive-secondary tr:nth-child(even)
+    {
+        @apply bg-gray-300 ;
+    }
+
+    .table-responsive-tertiary
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-tertiary table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-tertiary thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-tertiary tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-tertiary th
+    {
+        @apply border border-tertiary px-4 py-2 ;
+    }
+    .table-responsive-tertiary td
+    {
+        @apply border border-tertiary px-4 py-2 ;
+    }
+    .table-responsive-tertiary tbody > tr
+    {
+        @apply hover:bg-indigo-500 hover:text-quaternary;
+    }
+    .table-responsive-tertiary thead
+    {
+        @apply bg-tertiary text-quaternary;
+    }
+    .table-responsive-tertiary tfoot
+    {
+        @apply bg-tertiary text-quaternary;
+    }
+    .table-responsive-tertiary tr:nth-child(even)
+    {
+        @apply bg-indigo-300 ;
+    }
+
+    .table-responsive-danger
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-danger table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-danger thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-danger tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-danger th
+    {
+        @apply border border-danger px-4 py-2 ;
+    }
+    .table-responsive-danger td
+    {
+        @apply border border-danger px-4 py-2 ;
+    }
+    .table-responsive-danger tbody > tr
+    {
+        @apply hover:bg-red-400 hover:text-quaternary;
+    }
+    .table-responsive-danger thead
+    {
+        @apply bg-danger text-quaternary;
+    }
+    .table-responsive-danger tfoot
+    {
+        @apply bg-danger text-quaternary;
+    }
+    .table-responsive-danger tr:nth-child(even)
+    {
+        @apply bg-red-300 ;
+    }
+
+    .table-responsive-success
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-success table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-success thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-success tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-success th
+    {
+        @apply border border-success px-4 py-2 ;
+    }
+    .table-responsive-success td
+    {
+        @apply border border-success px-4 py-2 ;
+    }
+    .table-responsive-success tbody > tr
+    {
+        @apply hover:bg-green-400 hover:text-quaternary;
+    }
+    .table-responsive-success thead
+    {
+        @apply bg-success text-quaternary;
+    }
+    .table-responsive-success tfoot
+    {
+        @apply bg-success text-quaternary;
+    }
+    .table-responsive-success tr:nth-child(even)
+    {
+        @apply bg-green-300 ;
+    }
+
+    .table-responsive-warning
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-warning table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-warning thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-warning tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-warning th
+    {
+        @apply border border-warning px-4 py-2 ;
+    }
+    .table-responsive-warning td
+    {
+        @apply border border-warning px-4 py-2 ;
+    }
+    .table-responsive-warning tbody > tr
+    {
+        @apply hover:bg-yellow-400 hover:text-quaternary;
+    }
+    .table-responsive-warning thead
+    {
+        @apply bg-warning text-quaternary;
+    }
+    .table-responsive-warning tfoot
+    {
+        @apply bg-warning text-quaternary;
+    }
+    .table-responsive-warning tr:nth-child(even)
+    {
+        @apply bg-yellow-300 ;
+    }
+
+    .table-responsive-info
+    {
+        @apply overflow-x-scroll;
+    }
+    .table-responsive-info table
+    {
+        @apply table-auto w-full;
+    }
+    .table-responsive-info thead
+    {
+        @apply text-sm font-semibold tracking-widest;
+    }
+    .table-responsive-info tbody,tfoot
+    {
+        @apply text-sm font-medium;
+    }
+    .table-responsive-info th
+    {
+        @apply border border-info px-4 py-2 ;
+    }
+    .table-responsive-info td
+    {
+        @apply border border-info px-4 py-2 ;
+    }
+    .table-responsive-info tbody > tr
+    {
+        @apply hover:bg-blue-400 hover:text-quaternary;
+    }
+    .table-responsive-info thead
+    {
+        @apply bg-info text-quaternary;
+    }
+    .table-responsive-info tfoot
+    {
+        @apply bg-info text-quaternary;
+    }
+    .table-responsive-info tr:nth-child(even)
+    {
+        @apply bg-blue-300 ;
+    }
+
+
+    /* widget */
+    .widget-simple
+    {
+        @apply flex items-center box-content rounded-lg p-4;
+    }
+    .widget-simple-icon
+    {
+        @apply w-4/12 flex justify-center items-center p-2 mr-4;
+    }
+    .widget-simple-text
+    {
+        @apply flex flex-col items-end w-8/12;
+    }
+    .widget-simple-text h1
+    {
+        @apply font-bold;
+    }
+    .widget-simple-text span
+    {
+        @apply text-2xl font-black;
+    }
+
+    .widget-simple-card
+    {
+        @apply flex items-center box-content rounded-lg p-4;
+    }
+    .widget-simple-card-icon
+    {
+        @apply w-4/12 flex justify-center items-center p-2 mr-4 rounded-lg;
+    }
+    .widget-simple-card-text
+    {
+        @apply flex flex-col items-end w-8/12;
+    }
+    .widget-simple-card-text h1
+    {
+        @apply font-bold;
+    }
+    .widget-simple-card-text span
+    {
+        @apply text-2xl font-black;
+    }
+
+    .widget-border
+    {
+        @apply flex items-center box-content rounded-lg p-4 border-4;
+    }
+    .widget-border-icon
+    {
+        @apply w-4/12 flex justify-center items-center p-2 mr-4;
+    }
+    .widget-border-text
+    {
+        @apply flex flex-col items-end w-8/12;
+    }
+    .widget-border-text h1
+    {
+        @apply font-bold;
+    }
+    .widget-border-text span
+    {
+        @apply text-2xl font-black;
+    }
+
+    .widget-border-card
+    {
+        @apply flex items-center box-content rounded-lg p-4 border-4;
+    }
+    .widget-border-card-icon
+    {
+        @apply w-4/12 flex justify-center items-center p-2 mr-4 card;
+    }
+    .widget-border-card-text
+    {
+        @apply flex flex-col items-end w-8/12;
+    }
+    .widget-border-card-text h1
+    {
+        @apply font-bold;
+    }
+    .widget-border-card-text span
+    {
+        @apply text-2xl font-black;
+    }
+
 @tailwind utilities;
