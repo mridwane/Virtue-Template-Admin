@@ -54,13 +54,13 @@
                 <div class="sidebar-body">
                     <ul>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-item-link">
+                            <a href="Dashboard.html" class="sidebar-item-link">
                                 <i class='bx bxs-dashboard bx-xs'></i>
                                 <span class="sidebar-item-text line-clamp-1">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-item-link active">
+                            <a href="Widget.html" class="sidebar-item-link active">
                                 <i class='bx bxs-widget bx-xs'></i>
                                 <span class="sidebar-item-text line-clamp-1">Widget</span>
                             </a>
@@ -131,15 +131,65 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bxs-bar-chart-alt-2 bx-xs' ></i>      
+                                <span class="sidebar-item-text line-clamp-1">Charts</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Charts - ApexChart.html"> ApexChart</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bx-user-circle bx-xs'></i>     
+                                <span class="sidebar-item-text line-clamp-1">Authentication</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Auth - Login.html"> Login</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Register.html"> Register</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Forgot Password.html"> Forgot Password</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Error 404.html"> Error 404</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Error 500.html"> Error 500</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Maintenance.html"> Maintenance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="Resource.html" class="sidebar-item-link">
+                                <i class='bx bx-library bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">Resource</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="License.html" class="sidebar-item-link">
+                                <i class='bx bxs-certification bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">License</span>
+                            </a>
+                        </li>
                     </ul>                
                 </div>
             </div>
             <div class="sidebar-footer">
                 <div class="card">
                     <span>
-                        All Rights Reserved by <a href="#" class="text-primary font-semibold">Riddesain.</a> 
                         Designed and Developed by <a href="#" class="text-primary font-semibold">Ridwan.</a> 
-                        Under License <a href="#" class="text-primary font-semibold">MIT.</a>
+                        Under License <a href="License.html" class="text-primary font-semibold">MIT.</a>
                     </span>
                 </div>
                 <div class="card flex justify-center">
