@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="assets/img/logo_virtue.png">
+        <title>Virtue - License</title>
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <link href="assets/dist/tailwind.css" rel="stylesheet">
+        <!-- Icons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+    </head>    
+    <body class="full-body" x-data="{sidebar: true}">
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader-border">
+                <div class="preloader-dot"></div>
+            </div>
+            <span class="preloader-text">Loading</span>
+        </div>    
+        <!-- end preloader -->
+
+        <!-- sidebar -->
+        <div id="sidebar" class="sidebar" x-show="sidebar" :class="sidebar ? 'hidden lg:block' : 'block lg:hidden'" x-transition:enter="animate__animated animate__bounceInLeft"> 
+            <div class="sidebar-header">
+                <a href="#" class="flex items-center lg:justify-center">
+                    <div class="flex justify-center items-center box-content bg-quaternary shadow-neumorphism h-10 w-10 rounded-xl mr-4">
+                        <!-- For character logo-->
+                        <!-- <span class="text-primary font-black text-2xl">V</span>  -->
+                        <!-- For image logo-->
+                        <img src="assets/img/logo_virtue.png" class="w-7 h-7" alt="logo">
+                    </div>
+                    <span class="tracking-widest text-primary text-xl font-semibold lg:text-2xl">
+                        Virtue
+                    </span>
+                </a>
+                <div class="block lg:hidden">
+                    <button class="flex justify-center items-center py-2 box-content bg-quaternary shadow-neumorphism w-10 rounded-xl" @click="sidebar = false">
+                        <i class='bx bx-x bx-sm text-primary'></i>
+                    </button>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="sidebar-wrap">
+                <div class="sidebar-body">
+                    <ul>
+                        <li class="sidebar-item">
+                            <a href="Dashboard.html" class="sidebar-item-link">
+                                <i class='bx bxs-dashboard bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="Widget.html" class="sidebar-item-link">
+                                <i class='bx bxs-widget bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">Widget</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bxs-component bx-xs'></i>               
+                                <span class="sidebar-item-text line-clamp-1">Component</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Component - Alert.html"> Alert</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Badge.html"> Badge</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Button.html"> Button</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Card.html"> Card</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Colors.html"> Color</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - List Group.html"> List Group</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Modal.html"> Modal</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Pagination.html"> Pagination</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Component - Tooltip.html"> Tooltip</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bx-clipboard bx-xs'></i>            
+                                <span class="sidebar-item-text line-clamp-1">Form Element</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Form Element - Input.html"> Input</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Form Element - Input Group.html"> Input Group</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bx-table bx-xs'></i>         
+                                <span class="sidebar-item-text line-clamp-1">Tables</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Table - Default Table.html"> Default Table</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Table - Datatable.html"> DataTable</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bxs-bar-chart-alt-2 bx-xs' ></i>      
+                                <span class="sidebar-item-text line-clamp-1">Charts</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Charts - ApexChart.html"> ApexChart</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-list" x-data="{ open: false }">
+                            <button class="sidebar-list-link" @click="open = !open">
+                                <i class='bx bx-user-circle bx-xs'></i>     
+                                <span class="sidebar-item-text line-clamp-1">Authentication</span>
+                                <i class='bx bxs-right-arrow ml-4 transform duration-500' :class="open ? 'bx-rotate-90' : ''"></i>
+                            </button>
+                            <ul class="sidebar-list-dropdown transform duration-500" x-show="open" x-transition >
+                                <li class="list">
+                                    <a href="Auth - Login.html"> Login</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Register.html"> Register</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Forgot Password.html"> Forgot Password</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Error 404.html"> Error 404</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Error 500.html"> Error 500</a>
+                                </li>
+                                <li class="list">
+                                    <a href="Auth - Maintenance.html"> Maintenance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="Resource.html" class="sidebar-item-link">
+                                <i class='bx bx-library bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">Resource</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="License.html" class="sidebar-item-link active">
+                                <i class='bx bxs-certification bx-xs'></i>
+                                <span class="sidebar-item-text line-clamp-1">License</span>
+                            </a>
+                        </li>
+                    </ul>                
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="card">
+                    <span>
+                        Designed and Developed by <a href="#" class="text-primary font-semibold">Ridwan.</a> 
+                        Under License <a href="License.html" class="text-primary font-semibold">MIT.</a>
+                    </span>
+                </div>
+                <div class="card flex justify-center">
+                    <span class="font-medium text-primary">
+                        Virtue 1.0.0
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- end sidebar -->
+
+        <!-- main -->
+        <main class="main" x-bind:class="{'lg:w-full': ! sidebar }" >
+            <!-- nav -->
+            <nav class="flex justify-between">            
+                <div class="py-4">
+                    <div class="flex flex-row ">
+                        <button class="flex btn-icon lg:hidden" @click="sidebar = true" id="btn-sidebar">
+                            <i class='bx bx-menu bx-sm text-primary'></i>
+                        </button>
+                        <button class="lg:flex btn-icon hidden" @click="sidebar = !sidebar" id="btn-sidebar">
+                            <i class='bx bx-menu bx-sm text-primary'></i>
+                        </button>
+                        <div class="hidden lg:block">
+                            <div class="search">
+                                <input type="text" class="search-input" placeholder="Search...">
+                                <button class="search-btn">
+                                    <i class='bx bx-search-alt bx-sm' ></i>
+                                </button>
+                            </div>  
+                        </div>                
+                    </div>
+                </div> 
+                <div class="hidden lg:block w-3/12 py-4">
+                    <div class="flex justify-start">
+                        <div class="flex justify-start" x-data="{ open: false }">
+                            <button class="flex btn-icon" @click="open = ! open">
+                                <span class="notif-dot-success animate-ping"></span>
+                                <i class='bx bxs-inbox bx-sm bx-tada-hover text-primary' ></i>
+                            </button>
+                            <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
+                                <div class="w-60 h-auto p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                    <a href="#" class="flex justify-start p-2">
+                                        <img src="assets/img/faces/1.jpg" class="rounded-full h-10 w-10" alt="">
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Rey</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Hi, I need your help.</p>
+                                            <span class="px-2 font-light text-xs">07:00 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <img src="assets/img/faces/2.jpg" class="rounded-full h-10 w-10" alt="">
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Mike</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Can we meet tonight?.</p>
+                                            <span class="px-2 font-light text-xs">07:05 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <img src="assets/img/faces/5.jpg" class="rounded-full h-10 w-10" alt="">
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md line-clamp-1">Verra</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">What will you do today?</p>
+                                            <span class="px-2 font-light text-xs">07:54 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <hr class="border-gray-300 max-w-7xl">
+                                    <div class="flex justify-center items-center pt-4">
+                                        <a href="#" class="px-2 font-medium">Check all message</a>
+                                        <i class='bx bxs-right-arrow-circle bx-xs'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-start" x-data="{ open: false }">
+                            <button class="flex btn-icon lg:h-10 lg:w-10" @click="open = ! open">
+                                <span class="notif-dot-warning animate-ping"></span>
+                                <i class='bx bxs-notification bx-sm bx-tada-hover text-primary' ></i>
+                            </button>
+                            <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
+                                <div class="w-60 h-auto p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                    <a href="#" class="flex justify-start p-2">
+                                        <div class="card-icon p-2 bg-danger text-quaternary">
+                                            <i class='bx bx-shape-circle bx-sm'></i>
+                                        </div>  
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Jhon</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Jhon has made an access request.</p>
+                                            <span class="px-2 font-light text-xs">09:00 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <div class="card-icon p-2 bg-info text-quaternary">
+                                            <i class='bx bx-slider-alt bx-sm'></i>
+                                        </div>
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md">Setting</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">You have customized this template.</p>
+                                            <span class="px-2 font-light text-xs">09:20 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <a href="#" class="flex justify-start p-2">
+                                        <div class="card-icon p-2 bg-success text-quaternary">
+                                            <i class='bx bx-paste bx-sm'></i>
+                                        </div>
+                                        <div class="flex flex-col w-60">
+                                            <h1 class="px-2 font-semibold text-md line-clamp-1">Event Today</h1>
+                                            <p class="px-2 font-light text-xs line-clamp-1">Just a reminder that you have event.</p>
+                                            <span class="px-2 font-light text-xs">09:24 AM</span>
+                                        </div>                                    
+                                    </a>
+                                    <hr class="border-gray-300 max-w-7xl">
+                                    <div class="flex justify-center items-center pt-4">
+                                        <a href="#" class="px-2 font-medium">Check all notifcation</a>
+                                        <i class='bx bxs-right-arrow-circle bx-xs'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+                <div class="hidden lg:block w-9/12 ">
+                    <div x-data="{ open: false }" class="flex justify-end py-4">
+                        <div class="hidden lg:block">
+                            <p class="font-semibold py-2 px-4 tracking-wider">Hi, Muhammad</p>
+                        </div>                        
+                        <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
+                            <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
+                        </button>
+                        <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition>
+                            <div class="w-60 h-w-60 p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                <a href="#" class="flex-card">
+                                    <div class="card-icon">
+                                        <i class='bx bxs-user-circle bx-sm text-primary' ></i>
+                                    </div>
+                                    <span class="px-2 font-medium">Profile</span>
+                                </a>
+                                <a href="#" class="flex-card">
+                                    <div class="card-icon">
+                                        <i class='bx bx-slider-alt bx-sm text-primary'></i>
+                                    </div>
+                                    <span class="px-2 font-medium">Setting</span>
+                                </a>
+                                <hr class="border-gray-300">
+                                <a href="#" class="flex-card">
+                                    <div class="card-icon">
+                                        <i class='bx bx-exit bx-sm text-primary'></i>
+                                    </div>
+                                    <span class="px-2 font-medium ">logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- for mobile -->
+                <div class="flex flex-grow items-center justify-center">
+                    <div class="block lg:hidden"> 
+                        <a href="#" class="flex items-center justify-center">
+                            <span class="tracking-widest text-primary text-lg font-semibold ">
+                                Virtue
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-none">
+                    <div class="block lg:hidden "> 
+                        <div x-data="{ open: false }" class="flex justify-end py-4">                                             
+                            <button class="flex btn-icon" @click="open = ! open">
+                                <i class='bx bx-dots-horizontal-rounded bx-sm text-primary' ></i>
+                            </button>
+                            
+                            <div class="absolute mt-16" x-show="open" @click.outside="open = false" x-transition:enter="animate__animated animate__bounceInDown" x-transition:leave="animate__animated animate__bounceOutUp">
+                                <div class="w-60 h-w-60 p-4 bg-quaternary shadow-neumorphism text-tertiary rounded-lg">
+                                    <div class="flex-card">
+                                        <button class="h-10 w-10 border-tertiary rounded-full" @click="open = ! open">
+                                            <img src="assets/img/faces/7.jpg" class="w-10 rounded-full" alt="">
+                                        </button>
+                                        <p class="flex justify-center items-center font-semibold px-4 tracking-wider">Hi, Muhammad</p>                                    
+                                    </div>
+                                    <hr class="divider">
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <span class="notif-dot-success"></span>
+                                            <i class='bx bxs-inbox bx-sm text-primary' ></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Inbox</span>
+                                    </a>
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <span class="notif-dot-warning"></span>
+                                            <i class='bx bxs-notification bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Notification</span>
+                                    </a>
+                                    <hr class="divider">                                        
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <i class='bx bxs-user-circle bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Profile</span>
+                                    </a>
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <i class='bx bx-slider-alt bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium">Setting</span>
+                                    </a>
+                                    <hr class="border-gray-300">
+                                    <a href="#" class="flex-card">
+                                        <div class="card-icon">
+                                            <i class='bx bx-exit bx-sm text-primary'></i>
+                                        </div>
+                                        <span class="px-2 font-medium ">logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end for mobile -->
+            </nav>
+            <hr class="divider">
+            <!-- end nav -->     
+            
+            <!-- section -->
+            <section class="section">
+                <!-- header -->
+                <div class="card flex justify-between lg:items-center flex-col lg:flex-row">
+                    <div class="flex justify-start">
+                        <h1 class="text-primary font-medium text-2xl tracking-widest">License</h1> <!-- Title -->
+                        <span class="text-xs"></span> <!-- Sub Title -->
+                    </div>
+                    <div class="flex justify-end">
+                        <span class="text-sm"><a href="#" class="hover:text-primary">Dashboard /</a> License</span>
+                    </div>
+                </div>
+                <!-- end header -->
+
+                <!-- body -->
+                <div class="grid grid-cols-1"> 
+                    <div class="card flex justify-center flex-col gap-6 p-10">
+                        <h1 class="font-bold text-2xl text-center font-montserrat">
+                            MIT License
+                        </h1>
+                        <h4 class="font-medium text-lg text-center tracking-widest"> Copyright <i class='bx bxs-copyright bx-xs'></i> 2021 Muhammad Ridwan Eryansah</h4>
+                        <p class="font-mono text-justify tracking-widest leading-loose">
+                            Permission is hereby granted, free of charge, to any person obtaining a copy
+                            of this software and associated documentation files (the "Software"), to deal
+                            in the Software without restriction, including without limitation the rights
+                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                            copies of the Software, and to permit persons to whom the Software is
+                            furnished to do so, subject to the following conditions:
+
+                            The above copyright notice and this permission notice shall be included in all
+                            copies or substantial portions of the Software.
+
+                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                            SOFTWARE.
+                        </p>
+                    </div>             
+                </div>
+                <!-- end body -->
+            </section>
+            <!-- end section -->
+        </main>
+        <!-- end main -->
+        
+
+        <!-- Alpine JS -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <!-- JQuery -->
+        <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
