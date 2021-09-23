@@ -753,6 +753,14 @@
     {
         @apply text-xs font-medium text-secondary;
     }
+    .helper-tertiary
+    {
+        @apply text-xs font-medium text-tertiary;
+    }
+    .helper-quaternary
+    {
+        @apply text-xs font-medium text-quaternary;
+    }
     .helper-danger
     {
         @apply text-xs font-medium text-danger;
@@ -1298,6 +1306,32 @@
     .widget-border-card-text span
     {
         @apply text-2xl font-black;
+    }
+
+    /* auth */
+    .body-auth
+    {
+        @apply bg-quaternary text-sm font-poppins text-tertiary;
+    }
+    .section-auth
+    {
+        @apply py-8 px-4 lg:py-10 lg:px-20;
+    }
+    .wrap-content
+    {
+        @apply flex flex-col lg:flex-row justify-items-center items-center gap-8;
+    }
+    .content-illustration
+    {
+        @apply lg:w-6/12 xl:w-8/12 flex justify-center items-center p-10 rounded-lg;
+    }
+    .content-input
+    {
+        @apply lg:w-6/12 xl:w-4/12 card p-10 flex justify-center items-center flex-col gap-4;
+    }
+    .title-content-input
+    {
+        @apply flex justify-center items-center text-primary flex-col mb-10 gap-2 font-montserrat;
     }
 
 @tailwind utilities;
