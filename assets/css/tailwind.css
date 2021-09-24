@@ -611,7 +611,7 @@
     /* preloader */
     .preloader
     {
-        @apply flex fixed justify-center flex-col items-center w-full h-full top-0 left-0 z-50 bg-quaternary opacity-100 z-50;
+        @apply flex fixed justify-center flex-col items-center w-full h-full top-0 left-0 bg-quaternary opacity-100 z-50;
     }
     .preloader-border
     {
