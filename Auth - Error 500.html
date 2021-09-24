@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="assets/img/logo_virtue.png">
+        <title>Virtue - Error 500</title>
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <link href="assets/dist/tailwind.css" rel="stylesheet">
+        <!-- Icons -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Animations -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+    </head>    
+    <body class="body-auth">
+        <!-- preloader -->
+        <div id="preloader" class="preloader">
+            <div class="preloader-border">
+                <div class="preloader-dot"></div>
+            </div>
+            <span class="preloader-text">Loading</span>
+        </div>    
+        <!-- end preloader -->
+        
+        <section class="flex justify-center items-center flex-col p-20 tracking-widest">
+            <div class="mb-10">
+                <img src="assets/img/illustration/500.svg" width="400px" alt="">
+            </div>
+            <h1 class="font-bold text-5xl mb-4 text-center">Oops!</h1>
+            <h3 class="font-semibold text-2xl mb-4 text-center">Internal Server Error</h3>
+            <span class="mb-4 text-center">     
+                Lorem ipsum dolor sit amet, 
+                consectetuer adipiscing elit. Donec odio. 
+                Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. 
+            </span>
+            <button onclick="goBack()" class="btn-primary-md">Back</button>
+        </section>
+        
+
+        <!-- Alpine JS -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <!-- JQuery -->
+        <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

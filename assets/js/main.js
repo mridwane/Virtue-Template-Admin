@@ -1,4 +1,8 @@
 // Preloader
+function goBack() {
+    window.history.back();
+  }
+  
 $(document).ready(function(){
     $("#preloader").fadeOut();
 
