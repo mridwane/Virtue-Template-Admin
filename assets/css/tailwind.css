@@ -556,7 +556,7 @@
     /*  sidebar */
     .sidebar
     {
-        @apply absolute text-xs h-full bg-quaternary pr-4 text-secondary-light lg:relative w-full sm:w-full lg:w-80 xl:w-80 lg:top-0 lg:px-0 z-40;
+        @apply absolute text-xs h-auto bg-quaternary pr-4 text-secondary-light lg:relative w-full sm:w-full lg:w-80 xl:w-80 lg:top-0 lg:px-0 z-40;
     }
     .sidebar-header
     {
@@ -564,7 +564,7 @@
     }
     .sidebar-wrap
     {
-        @apply flex justify-between overflow-y-scroll ml-4 h-auto lg:h-96 2xl:h-full ;
+        @apply flex justify-between overflow-y-scroll ml-4 h-full lg:h-96 2xl:h-full ;
     }
     .sidebar-body
     {
@@ -596,7 +596,7 @@
     }
     .sidebar-footer
     {
-        @apply tracking-widest font-sans my-4 ml-4;
+        @apply tracking-widest font-sans my-4 ml-4 z-40;
     }
     .list
     {
@@ -630,11 +630,11 @@
     /* body */
     .full-body
     {
-        @apply flex bg-quaternary text-sm font-poppins text-tertiary  h-screen w-screen tracking-widest relative;
+        @apply flex bg-quaternary text-sm font-poppins text-tertiary  h-full w-full tracking-widest static;
     }
     .main   
     {
-        @apply mx-4 w-full lg:w-full xl:w-full;
+        @apply mx-4 w-full lg:w-full xl:w-full z-0;
     }
     .section
     {
