@@ -630,7 +630,7 @@
     /* body */
     .full-body
     {
-        @apply flex bg-quaternary text-sm font-poppins text-tertiary  h-screen w-screen tracking-widest fixed;
+        @apply flex bg-quaternary text-sm font-poppins text-tertiary  h-screen w-screen tracking-widest relative;
     }
     .main   
     {
