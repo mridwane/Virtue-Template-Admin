@@ -645,7 +645,7 @@
     /* modal */
     .modal
     {
-        @apply absolute z-50 w-full h-full flex justify-center bg-secondary bg-opacity-90;
+        @apply fixed p-4 z-50 w-full h-full flex justify-center bg-secondary bg-opacity-90;
     }
     .modal-header
     {

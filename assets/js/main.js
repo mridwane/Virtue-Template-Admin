@@ -9,15 +9,7 @@ $(document).ready(function(){
     $("#btn-sidebar").on("click",function(){
         $("#sidebar").removeClass("hidden");
     });
-
-    // $("#close-simple-modal").on("click",function(){
-    //     $("#simpleModal").addClass("hidden");
-    // });
-
-    // $("#simple-modal").on("click",function(){
-    //     $("#simpleModal").removeClass("hidden");
-    // });
-
+    
     $("[data-dismiss='modal']").click(function() {
         $("[data-modal='simpleModal']").addClass("hidden");
     });
