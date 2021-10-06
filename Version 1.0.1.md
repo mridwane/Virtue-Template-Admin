@@ -1,4 +1,4 @@
-# Virtue-Template-Admin
+# Virtue-Template-Admin (Version 1.0.1)
 
 # MIT License
 
